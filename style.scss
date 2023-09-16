@@ -1,0 +1,107 @@
+/*-- scss:defaults --*/
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+// color
+$theme-green: #023B2C;
+$theme-blue: #335C67;
+$theme-gold: #FCB040;
+$theme-cream: #f2f0e6;
+
+// font family
+$presentation-heading-font: 'Lato', sans-serif !default;
+$font-family-sans-serif: 'Poppins', sans-serif !default;
+$font-family-monospace: 'Source Code Pro', monospace !default;
+
+// font size
+$presentation-heading-font-weight: 800;
+$presentation-h1-font-size: 2.2em;
+$presentation-h2-font-size: 1.7em;
+$presentation-h3-font-size: 1.4em;
+$presentation-h4-font-size: 1.1em;
+$presentation-font-size-root: 40px;
+$presentation-line-height: 1.5em;
+
+// font color
+$presentation-heading-color: $theme-green;
+
+// code
+$code-block-font-size: 0.8em;
+$code-block-border-color: $theme-green;
+
+// bg colours
+$body-color: darken( $theme-green, 15% );
+$link-color: $theme-blue;
+$link-color-hover: darken( $link-color, 15% );
+$body-bg: $theme-cream;
+
+/*-- scss:rules --*/
+
+section.has-dark-background a, section.has-dark-background a:hover {
+  color: $body-bg;
+}
+
+figure>figcaption {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+details>summary {
+    color: $theme-blue;
+}
+
+.reveal pre.sourceCode code {
+    max-height: 650px;
+    overflow: auto;
+}
+
+.reveal code {
+    color: lighten( $theme-green, 7% );
+    background-color: rgba(0,0,0,0);
+    white-space: pre-wrap;
+}
+
+.reveal .footer {
+  color: $theme-blue;
+  font-family: $font-family-sans-serif;
+  padding-bottom: 25px;
+}
+
+.reveal .slide-logo {
+  right: 12px;
+  padding-bottom: 20px !important;
+  max-height: 70px !important;
+  z-index: 1;
+}
+
+.reveal .slide-menu-button {
+    left: 100px;
+    top: 30px;
+    padding-left: 20px;
+    color: $theme-blue;
+  }
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: $theme-gold;
+  height: 3%;
+}
+
+.reveal .slide-number {
+  color: $theme-blue;
+}
+
+.fas, .fa-solid {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: $theme-blue;
+}
+
+.fab, .fa-brands {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400;
+    color: $theme-blue;
+}
