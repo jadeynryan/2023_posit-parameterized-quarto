@@ -123,7 +123,7 @@ Still haven't learned LaTex, and not sure I'm going to?
 
 All slides with code snippets and resources are available at:
 
-**[tinyurl.com/quarto-params](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)**
+**[tinyurl.com/quarto-params](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)**
 
 [![](images/qr.png){fig-alt="QR code to slides." style="max-height:500px"}](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
 
@@ -541,14 +541,6 @@ format:
 :::
 :::
 
-## Example 2023 HTML Report: [bit.ly/soil-html](bit.ly/soil-html)
-
-[![](images/report_html.png){fig-alt="Beginning of 2023 example HTML report"}](https://wa-department-of-agriculture.github.io/soils/articles/html.html)
-
-## Example 2023 MS Word Report: [bit.ly/soil-docx](bit.ly/soil-docx)
-
-[![](images/2023_pg1.png){style="max-" fig-alt="First page of 2023 example MS Word report" height="750"}](https://wa-department-of-agriculture.github.io/soils/articles/docx.html)
-
 # --- Resources --- {background-color="#023B2C"}
 
 ## Quarto
@@ -579,6 +571,7 @@ format:
     -   [iris dataset by species (Zachary M. Smith)](https://zsmith27.github.io/rmarkdown_crash-course/lesson-7-parameterized-reports.html)
     -   [Dawson's Creek by episode (Matt Dray)](https://www.rostrum.blog/posts/2018-06-26-mail-merge/)
 -   **Quarto**
+    -   :sparkles: [soil health reports by producer & year (Jadey Ryan)](https://wa-department-of-agriculture.github.io/soils/index.html) :sparkles: **`{soils}` is a WIP!**
     -   [elevator reports by region and state (Mike Mahoney)](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/)
     -   [penguins dataset by species and year(Meghan Hall)](https://meghan.rbind.io/blog/quarto-pdfs/)
 
