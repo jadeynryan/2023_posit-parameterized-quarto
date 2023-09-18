@@ -10,7 +10,7 @@ format:
     theme: "style.scss"
     highlight-style: a11y-dark
     logo: images/logo-wsda-color.png
-    footer: "[{{< fa solid display >}}  bit.ly/quarto-params](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)"
+    footer: "[{{< fa solid display >}}  tinyurl.com/quarto-params](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)"
     link-external-newwindow: true
     slide-number: c/t
     df-print: kable
@@ -123,9 +123,9 @@ Still haven't learned LaTex, and not sure I'm going to?
 
 All slides with code snippets and resources are available at:
 
-[[bit.ly/quarto-params](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)]{style="font-size: 1.5em;font-weight: bold;"}
+**[tinyurl.com/quarto-params](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)**
 
-[![](images/qr.png){fig-alt="QR code to slides." width="300"}](https://rpubs.com/jadeynryan/parameterized_quarto_posit2023)
+[![](images/qr.png){fig-alt="QR code to slides." style="max-height:500px"}](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
 
 ## Workflow
 
@@ -541,11 +541,11 @@ format:
 :::
 :::
 
-## Example 2023 HTML Report: bit.ly/soil-html
+## Example 2023 HTML Report: [bit.ly/soil-html](bit.ly/soil-html)
 
 [![](images/report_html.png){fig-alt="Beginning of 2023 example HTML report"}](https://wa-department-of-agriculture.github.io/soils/articles/html.html)
 
-## Example 2023 MS Word Report: bit.ly/soil-docx
+## Example 2023 MS Word Report: [bit.ly/soil-docx](bit.ly/soil-docx)
 
 [![](images/2023_pg1.png){style="max-" fig-alt="First page of 2023 example MS Word report" height="750"}](https://wa-department-of-agriculture.github.io/soils/articles/docx.html)
 
@@ -622,7 +622,7 @@ format:
 
 ::: columns
 ::: {.column width="50%"}
-{{< fa solid display >}} [Slides](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)
+{{< fa solid display >}} [Slides](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
 
 {{< fa brands github size=xl >}} [jadeynryan](https://github.com/jadeynryan/)
 
@@ -632,7 +632,7 @@ format:
 
 {{< fa solid briefcase size=xl >}} [WA Dept. of Agriculture Webpage](https://agr.wa.gov/agscience)
 
-[![](images/qr.png){style="max-" fig-alt="QR code to slides." fig-align="left" height="300"}](https://bit.ly/quarto-params)
+[![](images/qr.png){style="max-" fig-alt="QR code to slides." fig-align="left" height="300"}](https://tinyurl.com/quarto-params)
 :::
 
 ::: {.fragment .column width="50%"}

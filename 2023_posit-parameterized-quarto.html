@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="2023_posit-parameterized-quarto_files/libs/clipboard/clipboard.min.js"></script>
+<script src="2023_posit-parameterized-quarto_files/libs/quarto-html/tabby.min.js"></script>
+<script src="2023_posit-parameterized-quarto_files/libs/quarto-html/popper.min.js"></script>
+<script src="2023_posit-parameterized-quarto_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="2023_posit-parameterized-quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="2023_posit-parameterized-quarto_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="2023_posit-parameterized-quarto_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="2023_posit-parameterized-quarto_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="2023_posit-parameterized-quarto_files/libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="2023_posit-parameterized-quarto_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<link href="2023_posit-parameterized-quarto_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="2023_posit-parameterized-quarto_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
+
+  <meta name="author" content="   Jadey Ryan Molly McIlquham, Kwabena Sarpong, Leslie Michel,  Teal Potter, Deirdre Griffin LaHue, Dani Gelardi  posit::conf(2023) | September 20">
+  <title>Parameterized Quarto reports improve understanding of soil health</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="2023_posit-parameterized-quarto_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="2023_posit-parameterized-quarto_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #97947a;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #97947a;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2; background-color: #2b2b2b; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #dcc6e0; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #ffd700; } /* Attribute */
+    code span.bn { color: #dcc6e0; } /* BaseN */
+    code span.bu { color: #f5ab35; } /* BuiltIn */
+    code span.cf { color: #ffa07a; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffa07a; } /* Constant */
+    code span.co { color: #d4d0ab; } /* Comment */
+    code span.cv { color: #d4d0ab; font-style: italic; } /* CommentVar */
+    code span.do { color: #d4d0ab; font-style: italic; } /* Documentation */
+    code span.dt { color: #dcc6e0; } /* DataType */
+    code span.dv { color: #dcc6e0; } /* DecVal */
+    code span.er { color: #dcc6e0; } /* Error */
+    code span.ex { color: #ffd700; } /* Extension */
+    code span.fl { color: #f5ab35; } /* Float */
+    code span.fu { color: #ffd700; } /* Function */
+    code span.im { color: #f8f8f2; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; } /* Keyword */
+    code span.op { color: #00e0e0; } /* Operator */
+    code span.ot { color: #ffa07a; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.sc { color: #00e0e0; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #f5ab35; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #d4d0ab; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="2023_posit-parameterized-quarto_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  
+  <script src="2023_posit-parameterized-quarto_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="2023_posit-parameterized-quarto_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Parameterized Quarto reports improve understanding of soil health</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<br><br><br><strong>Jadey Ryan</strong><br>Molly McIlquham, Kwabena Sarpong, Leslie Michel, <br>Teal Potter, Deirdre Griffin LaHue, Dani Gelardi<br><br>posit::conf(2023) | September 20 
+</div>
+</div>
+</div>
+
+</section>
+<section id="dont-care-about-soils" class="slide level2">
+<h2>Don’t care about soils?</h2>
+<div class="r-stack">
+<p><img data-src="images/ocean_floor.png" class="fragment fade-in-then-out" alt="RStudio RMarkdown parameterized report project for mapping ocean floors." height="700"></p>
+<p><img data-src="images/urban_institute.png" class="fragment fade-in-then-out" alt="Report for Alabama spending with text and plots generated from parameterized RMarkdown." height="700"></p>
+<p><img data-src="images/driver_quality.png" class="fragment fade-in-then-out" alt="Report for Alaska driver quality with text, plot, and table generated from parameterized RMarkdown." height="700"></p>
+</div>
+<aside class="notes">
+<p>Data don’t make a difference, the people do. So it’s our responsibility to make the data and results understandable and interpretable for the people who have the power to make a difference. Parameterized reports are one way to democratize data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="i-went-from" class="slide level2">
+<h2>I went from</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>water scooping technician</p>
+<p><img data-src="images/sampling.jpg" alt="Jadey in waders setting up a transect with a measuring tape to measure flow in a small stream."></p>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p>to data scientist</p>
+<p><img data-src="images/mai.jpg" alt="Jadey's cat, Mai, sitting on her laptop that has RStudio open. The monitor next to the laptop and cat has the R Packages book by Hadley Wickham and Jenny Bryan open."></p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>No CS or coding background. Went from picking leeches off my boots to picking my cat off my keyboard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how" class="slide level2">
+<h2>How?</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<div class="fragment">
+<p><em>With a skills test!</em> <br><br></p>
+</div>
+<div class="fragment">
+<p><strong>Task:</strong> generate custom Soil Health Reports for each individual farmer</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p><strong>Timeframe:</strong> one week</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p><strong>Challenge:</strong> how do I automate custom reports???</p>
+</div>
+</div><div class="column" style="width:35%;">
+<div class="fragment">
+<p><img data-src="images/confused_tai.jpg" style="max-height:700px" alt="Cat with an expression of existential dread"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="rmarkdown-ms-word-pdf" class="slide level2">
+<h2>2021: RMarkdown &gt; MS Word &gt; PDF</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/2021_pg1.png" style="max-height:700px" alt="Cover page of 2021 report with project summary"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/2021_pg4.png" style="max-height:700px" alt="Example 2021 report with box plots"></p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>MS Word much easier and faster to get started with beautiful styling compared to LaTex.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="html-with-quarto" class="slide level2">
+<h2>2023: HTML with Quarto!</h2>
+
+<img data-src="images/report_html.png" alt="Beginning of 2023 example HTML report" class="r-stretch"></section>
+<section id="and-ms-word-to-pdf" class="slide level2">
+<h2>and MS Word to PDF</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/2023_pg1.png" style="max-height:725px" alt="First page of 2023 example MS Word report"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/2023_pg11.png" style="max-height:725px" alt="Page from example MS Word report showing soil texture triangle"></p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Still haven’t learned LaTex, and not sure I’m going to?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="dont-worry-about-taking-good-notes" class="slide level2">
+<h2>Don’t worry about taking good notes</h2>
+<p>All slides with code snippets and resources are available at:</p>
+<p><strong><a href="https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/">tinyurl.com/quarto-params</a></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://jadeynryan.github.io/2023_posit-parameterized-quarto/"><img data-src="images/qr.png" style="max-height:500px" alt="QR code to slides."></a></p>
+</figure>
+</div>
+</section>
+<section id="workflow" class="slide level2">
+<h2>Workflow</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/mermaid.svg" style="max-height:750px" alt="Flow chart of workflow: Learn about parameterized reports, prepare subsettable data, create content for easy consumption, design for accessibility."></p>
+</div><div class="column fragment" style="width:50%;">
+<p>Parameterized reports work with both <code>Knitr</code> and <code>Jupyter</code> engines.</p>
+<p><img data-src="images/typing_tai.jpg" style="max-height:600px" alt="Cat typing on laptop."></p>
+</div>
+</div>
+</section>
+<section>
+<section id="step-1-learn-about-parameterized-reports" class="title-slide slide level1 center" data-background-color="#023B2C">
+<h1>— Step 1 — <br> Learn about parameterized reports</h1>
+
+</section>
+<section id="what-are-parameterized-reports" class="slide level2">
+<h2>What are parameterized reports?</h2>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/template1.png" class="fragment" alt="File with the word '.qmd' inside and the word 'Function' above." width="1300"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/template2.png" class="fragment" alt="An arrow points from 'Input' with 'params$year' to the previous image with 'Function' and '.qmd' file." width="1300"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/template3.png" class="fragment" alt="In addition to the previous two images, arrows point to five reports with years 2019 through 2023 on them in a flow chart." width="1300"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="yaml-header-yet-another-markdown-language" class="slide level2">
+<h2>YAML Header: Yet Another Markdown Language</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="2|3-5|6-8|11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Soil Health Report"</span><span class="co">               # Metadata</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">format</span><span class="kw">:</span><span class="co">                                   # Set format types</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at">                                     </span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at">                            </span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">params</span><span class="kw">:</span><span class="co">                                   # Set default parameters</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="at">  </span><span class="fu">farmer</span><span class="kw">:</span><span class="at"> Sammy Sunflower                   </span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2023</span><span class="at">                                </span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="pp">---</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="at">    </span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="at">Report content goes here.</span><span class="co">                 # Write content</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="access-your-parameters" class="slide level2">
+<h2>Access your parameters</h2>
+<p>Run any line or chunk to add <code>params</code> to your environment.</p>
+<div class="fragment">
+<p><code>params</code> object is a list.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">str</span>(params)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 2
+ $ farmer: chr "Sammy Sunflower"
+ $ year  : num 2023</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Access with <code>$</code> notation.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>params<span class="sc">$</span>farmer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Sammy Sunflower"</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>For inline code, enclose the expression in <code>`r `</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>These are results for <span class="in">`r params$farmer`</span> from <span class="in">`r params$year`</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>These are results for Sammy Sunflower from 2023.</p>
+</div>
+</section>
+<section id="render-with-the-rstudio-ide" class="slide level2">
+<h2>Render with the RStudio IDE</h2>
+
+<img data-src="images/render.png" alt="RStudio Quarto Render button with a dropdown for HTML and MS Word with Render on Save option checked" class="r-stretch"><p><strong>Render Button</strong>, keyboard shortcut <code>Ctrl + Shift + K</code>, or by saving</p>
+<div class="fragment">
+<p>Uses default parameters in the YAML.</p>
+</div>
+<div class="fragment">
+<p>Output file has same name and location as input file.</p>
+</div>
+</section>
+<section id="render-with-quartoquarto_render" class="slide level2">
+<h2>Render with <code>quarto::quarto_render()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|2|3|4|5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="at">input =</span> <span class="st">"producer_report.qmd"</span>,                    <span class="co"># Input Quarto file</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="at">output_format =</span> <span class="st">"html"</span>,                           <span class="co"># Output format</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="at">output_file =</span> <span class="st">"2022_OscarOrchard_Report.html"</span>,    <span class="co"># Output file name</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="at">execute_params =</span> <span class="fu">list</span>(                            <span class="co"># List of parameters</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="at">farmer =</span> <span class="st">"Oscar Orchard"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7"></a>    <span class="at">year =</span> <span class="dv">2022</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="render-all-reports-at-once" class="slide level2">
+<h2>Render all reports at once</h2>
+<p>Create a data frame with:</p>
+<div>
+<ul>
+<li class="fragment"><code>output_file</code> (filename)</li>
+<li class="fragment"><code>execute_params</code> (named list of parameters)</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>reports <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  dplyr<span class="sc">::</span><span class="fu">distinct</span>(farmer, year) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="at">output_file =</span> <span class="fu">paste0</span>(</span>
+<span id="cb8-5"><a href="#cb8-5"></a>      year, <span class="st">"_"</span>, <span class="fu">gsub</span>(<span class="st">" "</span>, <span class="st">""</span>, farmer), <span class="st">"_Report.html"</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>    ),</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="at">execute_params =</span> purrr<span class="sc">::</span><span class="fu">map2</span>(</span>
+<span id="cb8-8"><a href="#cb8-8"></a>      farmer, year,</span>
+<span id="cb8-9"><a href="#cb8-9"></a>      \(x, y) <span class="fu">list</span>(<span class="at">farmer =</span> x, <span class="at">year =</span> y)</span>
+<span id="cb8-10"><a href="#cb8-10"></a>    )</span>
+<span id="cb8-11"><a href="#cb8-11"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb8-12"><a href="#cb8-12"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(output_file, execute_params)</span>
+<span id="cb8-13"><a href="#cb8-13"></a></span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="fu">head</span>(reports, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">output_file</th>
+<th style="text-align: left;">execute_params</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2023_SammySunflower_Report.html</td>
+<td style="text-align: left;">Sammy Sunflower, 2023</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022_OscarOrchard_Report.html</td>
+<td style="text-align: left;">Oscar Orchard, 2022</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022_TinaTomato_Report.html</td>
+<td style="text-align: left;">Tina Tomato, 2022</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="render-all-reports-at-once-1" class="slide level2">
+<h2>Render all reports at once</h2>
+<p>Map over each row of the <code>reports</code> dataframe.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>reports <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  purrr<span class="sc">::</span><span class="fu">pwalk</span>(</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    quarto<span class="sc">::</span>quarto_render,</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="at">input =</span> <span class="st">"template.qmd"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="at">output_format =</span> <span class="st">"html"</span>  </span>
+<span id="cb9-6"><a href="#cb9-6"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="videos/render_reports.mp4"></video>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="images/surprise_mai.jpg" alt="Surprised cat next to the surprised Pikachu meme." class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="step-2-prepare-subsettable-data" class="title-slide slide level1 center" data-background-color="#023B2C">
+<h1>— Step 2 — <br>Prepare subsettable data</h1>
+
+</section>
+<section id="our-simple-data" class="slide level2">
+<h2>Our simple data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">year</th>
+<th style="text-align: left;">sampleId</th>
+<th style="text-align: left;">farmer</th>
+<th style="text-align: left;">crop</th>
+<th style="text-align: right;">sand_%</th>
+<th style="text-align: right;">silt_%</th>
+<th style="text-align: right;">clay_%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">23-SUN-01</td>
+<td style="text-align: left;">Sammy Sunflower</td>
+<td style="text-align: left;">Sunflower</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">22-ORC-02</td>
+<td style="text-align: left;">Oscar Orchard</td>
+<td style="text-align: left;">Cherry</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">22-TOM-02</td>
+<td style="text-align: left;">Tina Tomato</td>
+<td style="text-align: left;">Vegetable</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">22-HAR-03</td>
+<td style="text-align: left;">Henry Harvest</td>
+<td style="text-align: left;">Herb</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">23-GAR-03</td>
+<td style="text-align: left;">Grace Gardener</td>
+<td style="text-align: left;">Sunflower</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2022</td>
+<td style="text-align: left;">22-QUI-02</td>
+<td style="text-align: left;">Quincy Quinoa</td>
+<td style="text-align: left;">Quinoa</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">14</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>dummy punny farmer names from Chat GPT</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="use-params-to-set-up-comparisons" class="slide level2">
+<h2>Use <code>params</code> to set up comparisons</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="2|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(farmer <span class="sc">==</span> params<span class="sc">$</span>farmer) <span class="sc">|&gt;</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  more data wrangling</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Get the farmer's crops</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>farmer_crop <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(farmer <span class="sc">==</span> params<span class="sc">$</span>farmer) <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>  dplyr<span class="sc">::</span><span class="fu">pull</span>(crop) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">unique</span>()</span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a>data_long <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a>  <span class="co"># Tidy data: one observation per row</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"sand_%"</span><span class="sc">:</span><span class="st">"clay_%"</span>),</span>
+<span id="cb12-10"><a href="#cb12-10"></a>                    <span class="at">names_to =</span> <span class="st">"measurement"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-11"><a href="#cb12-11"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    <span class="co"># Categorize samples based on if they are from the farmer of</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="co"># interest or are of the same crop type</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>    <span class="at">category =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
+<span id="cb12-15"><a href="#cb12-15"></a>      farmer <span class="sc">==</span> params<span class="sc">$</span>farmer <span class="sc">~</span> <span class="st">"Your fields"</span>,</span>
+<span id="cb12-16"><a href="#cb12-16"></a>      crop <span class="sc">%in%</span> farmer_crop <span class="sc">~</span> <span class="st">"Same crop"</span>,</span>
+<span id="cb12-17"><a href="#cb12-17"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Other fields"</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a>    )</span>
+<span id="cb12-19"><a href="#cb12-19"></a>  )</span>
+<span id="cb12-20"><a href="#cb12-20"></a></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="co"># Set category factor levels</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a>data_long<span class="sc">$</span>category <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb12-23"><a href="#cb12-23"></a>  data_long<span class="sc">$</span>category,</span>
+<span id="cb12-24"><a href="#cb12-24"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Other fields"</span>, <span class="st">"Same crop"</span>, <span class="st">"Your fields"</span>),</span>
+<span id="cb12-25"><a href="#cb12-25"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Other fields"</span>, <span class="st">"Same crop"</span>, <span class="st">"Your fields"</span>)</span>
+<span id="cb12-26"><a href="#cb12-26"></a>)</span>
+<span id="cb12-27"><a href="#cb12-27"></a></span>
+<span id="cb12-28"><a href="#cb12-28"></a>data_long <span class="sc">|&gt;</span> </span>
+<span id="cb12-29"><a href="#cb12-29"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(year, sampleId)) <span class="sc">|&gt;</span> </span>
+<span id="cb12-30"><a href="#cb12-30"></a>  dplyr<span class="sc">::</span><span class="fu">slice_head</span>(<span class="at">by =</span> category) <span class="sc">|&gt;</span> </span>
+<span id="cb12-31"><a href="#cb12-31"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-32"><a href="#cb12-32"></a>  kableExtra<span class="sc">::</span><span class="fu">column_spec</span>(<span class="dv">5</span>, <span class="at">background =</span> <span class="st">"#FDCE86"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">farmer</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">crop</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">measurement</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">value</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sammy Sunflower</td>
+<td style="text-align: left;">Sunflower</td>
+<td style="text-align: left;">sand_%</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Your fields</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oscar Orchard</td>
+<td style="text-align: left;">Cherry</td>
+<td style="text-align: left;">sand_%</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Other fields</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Grace Gardener</td>
+<td style="text-align: left;">Sunflower</td>
+<td style="text-align: left;">sand_%</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Same crop</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section></section>
+<section>
+<section id="step-3-create-content-for-easy-consumption" class="title-slide slide level1 center" data-background-color="#023B2C">
+<h1>— Step 3 — <br>Create content for easy consumption</h1>
+
+</section>
+<section id="interpretation-through-comparison" class="slide level2">
+<h2>Interpretation through comparison</h2>
+<p>Show how their results compare to other samples in similar contexts.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb13-3"><a href="#cb13-3"></a>data_long <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="at">x =</span> measurement,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="at">y =</span> value,</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="at">color =</span> category,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="at">shape =</span> category,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>    <span class="at">size =</span> category,</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="at">alpha =</span> category</span>
+<span id="cb13-11"><a href="#cb13-11"></a>  )) <span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>  <span class="co"># Define styles for producer's samples versus all samples</span></span>
+<span id="cb13-14"><a href="#cb13-14"></a>  <span class="fu">scale_alpha_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb13-15"><a href="#cb13-15"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="fl">0.5</span>,</span>
+<span id="cb13-16"><a href="#cb13-16"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="dv">1</span>,</span>
+<span id="cb13-17"><a href="#cb13-17"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a>  )) <span class="sc">+</span></span>
+<span id="cb13-19"><a href="#cb13-19"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb13-20"><a href="#cb13-20"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="st">"#CCC29C"</span>,</span>
+<span id="cb13-21"><a href="#cb13-21"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="st">"#76ADBC"</span>,</span>
+<span id="cb13-22"><a href="#cb13-22"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="st">"#A60F2D"</span></span>
+<span id="cb13-23"><a href="#cb13-23"></a>  )) <span class="sc">+</span></span>
+<span id="cb13-24"><a href="#cb13-24"></a>  <span class="fu">scale_size_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb13-25"><a href="#cb13-25"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
+<span id="cb13-26"><a href="#cb13-26"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="dv">4</span>,</span>
+<span id="cb13-27"><a href="#cb13-27"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb13-28"><a href="#cb13-28"></a>  )) <span class="sc">+</span></span>
+<span id="cb13-29"><a href="#cb13-29"></a>  washi<span class="sc">::</span><span class="fu">washi_theme</span>(</span>
+<span id="cb13-30"><a href="#cb13-30"></a>    <span class="at">legend_position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb13-31"><a href="#cb13-31"></a>    <span class="at">gridline_x =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb13-32"><a href="#cb13-32"></a>    <span class="at">gridline_y =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb13-33"><a href="#cb13-33"></a>    <span class="at">text_scale =</span> <span class="fl">1.5</span></span>
+<span id="cb13-34"><a href="#cb13-34"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-35"><a href="#cb13-35"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb13-36"><a href="#cb13-36"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb13-37"><a href="#cb13-37"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb13-38"><a href="#cb13-38"></a>        <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"gray"</span>, <span class="at">fill =</span> <span class="cn">NA</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="2023_posit-parameterized-quarto_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<section id="make-your-reports-self-contained" class="slide level2">
+<h2>Make your reports self-contained</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Embed everything in your HTML file.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1"></a><span class="pp">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="fragment column" style="width:50%;">
+<p>Be mindful of file size.</p>
+<p><img data-src="images/titanic_tai.png" style="max-height:600px" alt="Cat on sinking Titanic meme."></p>
+</div>
+</div>
+</section>
+<section id="make-your-reports-self-contained-1" class="slide level2">
+<h2>Make your reports self-contained</h2>
+<p>Provide your reader the context to understand the results.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">## What We Measured in Your Soil</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a>{{&lt; include soil_health_measurements.qmd &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>Includes</code> shortcodes make it easy to reuse information across reports.</p>
+</section></section>
+<section>
+<section id="step-4-design-for-accessibility" class="title-slide slide level1 center" data-background-color="#023B2C">
+<h1>— Step 4 — <br>Design for accessibility</h1>
+
+</section>
+<section id="conditional-markdown" class="slide level2">
+<h2>Conditional markdown</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="1|"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1"></a>:::: {.content-visible when-format="html"}</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a>::: panel-tabset</span>
+<span id="cb16-4"><a href="#cb16-4"></a></span>
+<span id="cb16-5"><a href="#cb16-5"></a>Background on soil measurements.</span>
+<span id="cb16-6"><a href="#cb16-6"></a></span>
+<span id="cb16-7"><a href="#cb16-7"></a>:::</span>
+<span id="cb16-8"><a href="#cb16-8"></a>  </span>
+<span id="cb16-9"><a href="#cb16-9"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p><img data-src="images/tabset.png" alt="Screenshot of soil measurement tabset in HTML report."></p>
+</div>
+</section>
+<section id="conditional-markdown-1" class="slide level2">
+<h2>Conditional markdown</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="1|"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1"></a>:::: {.content-visible unless-format="html"}</span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a>Background on soil measurements.</span>
+<span id="cb17-4"><a href="#cb17-4"></a></span>
+<span id="cb17-5"><a href="#cb17-5"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p><img data-src="images/no_tabset.png" alt="Screenshot of soil measurements without tabset in MS Word report."></p>
+</div>
+</section>
+<section id="conditional-code-evaluation" class="slide level2">
+<h2>Conditional code evaluation</h2>
+<p>Get the output format type in your setup chunk.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="in">```{r setup}</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="co"># Get output file type</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>out_type <span class="ot">&lt;-</span> knitr<span class="sc">::</span>opts_knit<span class="sc">$</span><span class="fu">get</span>(<span class="st">"rmarkdown.pandoc.to"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="conditional-code-evaluation-1" class="slide level2">
+<h2>Conditional code evaluation</h2>
+<p>Use <code>out_type</code> in chunk options to control code evaluation.</p>
+<div class="fragment">
+<p>Interactive plot for HTML reports:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="co">#| eval: !expr out_type == "html"</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="co"># code to create interactive {plotly}</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+</div>
+<div class="fragment">
+<p>Static plot for MS Word reports:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="co">#| eval: !expr out_type == "docx"</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a></span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="co"># code to create static {ggplot2}</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="style-with-font-size-and-color-contrast-in-mind" class="slide level2">
+<h2>Style with font size and color contrast in mind</h2>
+
+<img data-src="images/contrast_checker.png" alt="Screenshot of color contrast tool." class="r-stretch quarto-figure-center"></section>
+<section id="style-with-font-size-and-color-contrast-in-mind-1" class="slide level2">
+<h2>Style with font size and color contrast in mind</h2>
+
+<img data-src="images/viz_palette.png" alt="Screenshot of viz-palette color palette tool." class="r-stretch quarto-figure-center"></section>
+<section id="style-with-font-size-and-color-contrast-in-mind-2" class="slide level2">
+<h2>Style with font size and color contrast in mind</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="4|6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1"></a><span class="pp">---</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="fu">format</span><span class="kw">:</span><span class="at">                                     </span></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at">                                     </span></span>
+<span id="cb21-4"><a href="#cb21-4"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span><span class="co">               # Style for HTML output</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="at">  </span><span class="fu">word_document</span><span class="kw">:</span><span class="at">                            </span></span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="at">    </span><span class="fu">reference_docx</span><span class="kw">:</span><span class="at"> styles.docx</span><span class="co">   # Style for MS Word output</span></span>
+<span id="cb21-7"><a href="#cb21-7"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="use-browser-developer-tools-to-check" class="slide level2">
+<h2>Use browser developer tools to check</h2>
+
+<img data-src="images/dev_tools.png" alt="To get to developer tools: Right-click > Inspect > Ctrl + Shift + C > Hover over element. You can see contrast checker when hovering over any HTML element." class="r-stretch"></section>
+<section id="use-browser-developer-tools-to-check-1" class="slide level2">
+<h2>Use browser developer tools to check</h2>
+
+<img data-src="images/dev_tools2.png" alt="Clicking on the color attribute in the inspector pane opens a dialog that allows you to see the contrast ratio and adjust the color to meet accessibility guidelines." class="r-stretch"></section>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/mermaid.svg" style="max-height:750px" alt="Flow chart of workflow: Learn about parameterized reports, prepare subsettable data, create content for easy consumption, design for accessibility."></p>
+</div><div class="fragment column" style="width:50%;">
+<p><img data-src="images/tv_mai.jpg" style="max-height:750px" alt="Cat falling asleep in human's lap with a phone with video playing on the sleepy cat's belly."></p>
+</div>
+</div>
+</section>
+<section id="example-2023-html-report-bit.lysoil-html" class="slide level2">
+<h2>Example 2023 HTML Report: <a href="bit.ly/soil-html">bit.ly/soil-html</a></h2>
+
+<img data-src="images/report_html.png" alt="Beginning of 2023 example HTML report" class="r-stretch quarto-figure-center"></section>
+<section id="example-2023-ms-word-report-bit.lysoil-docx" class="slide level2">
+<h2>Example 2023 MS Word Report: <a href="bit.ly/soil-docx">bit.ly/soil-docx</a></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://wa-department-of-agriculture.github.io/soils/articles/docx.html"><img data-src="images/2023_pg1.png" style="max-" alt="First page of 2023 example MS Word report" height="750"></a></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="resources" class="title-slide slide level1 center" data-background-color="#023B2C">
+<h1>— Resources —</h1>
+
+</section>
+<section id="quarto" class="slide level2">
+<h2>Quarto</h2>
+<ul>
+<li><strong>Documentation and blogs</strong>
+<ul>
+<li><a href="https://quarto.org/docs/get-started/">Getting Started Documentation</a></li>
+<li><a href="https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/">We don’t talk about Quarto (Alison Hill)</a></li>
+<li><a href="https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/">Quarto Tip of the Day (Mine Çetinkaya-Rundel)</a></li>
+</ul></li>
+<li><strong>Videos</strong>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=p7Hxu4coDl8">Hello Quarto Keynote from rstudio::conf(2022) (Mine Çetinkaya-Rundel &amp; Julia Stewart Lowndes)</a></li>
+<li><a href="https://youtu.be/_f3latmOhew?si=mOhOPI__32XcmveT">Get Started with Quarto (Mine Çetinkaya-Rundel)</a></li>
+<li><a href="https://www.youtube.com/live/yvi5uXQMvu4?si=smcZL2BJqlrlm_a6">Welcome to Quarto Workshop (Tom Mock)</a></li>
+<li><a href="https://www.youtube.com/live/hbf7Ai3jnxY?si=t6hHleQe-4sbr7pE">Beautiful Reports and Presentations with Quarto (Tom Mock)</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="read-about-parameterized-reports" class="slide level2">
+<h2>Read about parameterized reports</h2>
+<ul>
+<li><a href="https://quarto.org/docs/computations/parameters.html">Quarto Documentation: Parameters</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/parameterized-reports.html">R Markdown: The Definitive Guide Chapter 15 (Yihui Xie, J. J. Allaire, Garrett Grolemund)</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/parameterized-reports.html">R Markdown Cookbook Chapter 17.4 (Yihui Xie, Christophe Dervieux, Emily Riederer)</a></li>
+<li><a href="https://book.rwithoutstatistics.com/parameterized-reports-chapter.html">R Without Statistics Chapter 7 (David Keyes)</a></li>
+</ul>
+</section>
+<section id="examples-of-parameterized-reports" class="slide level2">
+<h2>Examples of parameterized reports</h2>
+<ul>
+<li><strong>RMarkdown</strong>
+<ul>
+<li><a href="https://www.r4wrds.com/intermediate/m_parameterized_reports">groundwater monitoring by county (R4WRDS)</a></li>
+<li><a href="https://towardsdatascience.com/parameters-in-r-markdown-ade0cfac0c9b">gapminder reports by year (Drew Seewald)</a></li>
+<li><a href="https://urban-institute.medium.com/iterated-fact-sheets-with-r-markdown-d685eb4eafce">bad driver fact sheets by state (Aaron Williams)</a></li>
+<li><a href="https://zsmith27.github.io/rmarkdown_crash-course/lesson-7-parameterized-reports.html">iris dataset by species (Zachary M. Smith)</a></li>
+<li><a href="https://www.rostrum.blog/posts/2018-06-26-mail-merge/">Dawson’s Creek by episode (Matt Dray)</a></li>
+</ul></li>
+<li><strong>Quarto</strong>
+<ul>
+<li><a href="https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/">elevator reports by region and state (Mike Mahoney)</a></li>
+<li><a href="https://meghan.rbind.io/blog/quarto-pdfs/">penguins dataset by species and year(Meghan Hall)</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="videos-about-parameterized-reports" class="slide level2">
+<h2>Videos about parameterized reports</h2>
+<ul>
+<li><a href="https://rfortherestofus.com/2020/10/parameterized-reporting-with-rmarkdown/">Parameterized Reporting with R (David Keyes)</a></li>
+<li><a href="https://www.youtube.com/watch?v=8eoncQ457Yg">R Markdown: YAML, Parameters (Data Science for Everyone)</a></li>
+<li><a href="https://www.youtube.com/watch?v=DkQEpqySylc&amp;t=387s">Rmarkdown Guide - Parameterized Reports (TidyX Ellis Hughes &amp; Patrick Ward)</a></li>
+<li><a href="https://www.youtube.com/watch?v=p55q2szc3I8&amp;t=15s">Using rmarkdown and parameterised reports (Mike K Smith)</a></li>
+<li><a href="https://www.youtube.com/watch?v=mFEEkOYvAZg">Extreme Rmarkdown report automation with parameters and templates (Bruno Rodrigues)</a></li>
+<li><a href="https://posit.co/resources/videos/parameterized-r-markdown-reports-with-rstudio-connect/">Parameterized R Markdown reports with RStudio Connect (Aron Atkins)</a></li>
+<li><a href="https://www.coursera.org/lecture/reproducible-templates-analysis/adding-parameters-in-a-document-template-6fQwc">Reproducible Templates for Analysis and Dissemination Free Coursera Class (Emory University)</a></li>
+</ul>
+</section>
+<section id="style-sheets" class="slide level2">
+<h2>Style sheets</h2>
+<ul>
+<li><strong>HTML</strong>
+<ul>
+<li><a href="https://quarto.org/docs/output-formats/html-basics.html#css-styles">Quarto Documentation: CSS Styles</a></li>
+</ul></li>
+<li><strong>MS Word</strong>
+<ul>
+<li><a href="https://quarto.org/docs/output-formats/ms-word-templates.html">Quarto Documentation: Docx Style Template</a></li>
+<li><a href="https://vimeo.com/110804387">Create A MS Word Template for R Markdown (Video by Yihui Xie)</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="accessibility-tools" class="slide level2">
+<h2>Accessibility tools</h2>
+<p><a href="https://www.w3.org/WAI/WCAG21/quickref/">Web Content Accessibility Guidelines (WCAG) Quick Reference</a></p>
+<ul>
+<li><strong>Pick your colors</strong>
+<ul>
+<li><a href="https://colourcontrast.cc/">Colour Contrast Checker</a></li>
+<li><a href="https://projects.susielu.com/viz-palette">Viz Palette</a></li>
+<li><a href="https://color.adobe.com/create/color-wheel/">Chroma.js Color Palette</a></li>
+<li><a href="https://color.adobe.com/create/color-wheel/">Adobe Color Wheel</a></li>
+</ul></li>
+<li><strong>Check your colors</strong>
+<ul>
+<li><a href="http://www.color-blindness.com/coblis-color-blindness-simulator/">Color Blindness Simulator</a></li>
+<li><a href="https://github.com/clauswilke/colorblindr"><code>colorblindr</code> package</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="check-html-reports-with-browser-inspect-tool" class="slide level2">
+<h2>Check HTML reports with browser <code>Inspect</code> tool</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/accessibility/test-inspect-tool">Microsoft Edge Accessibility Guide</a></li>
+<li><a href="https://developer.chrome.com/docs/devtools/accessibility/reference/">Google Chrome Accessibility Features Reference</a></li>
+</ul>
+</section>
+<section id="id-love-to-connect-with-you" class="slide level2">
+<h2>I’d love to connect with you!</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><i class="fa-solid fa-display" aria-label="display"></i> <a href="https://jadeynryan.github.io/2023_posit-parameterized-quarto/">Slides</a></p>
+<p><i class="fa-brands fa-github fa-xl" aria-label="github"></i> <a href="https://github.com/jadeynryan/">jadeynryan</a></p>
+<p><i class="fa-brands fa-linkedin fa-xl" aria-label="linkedin"></i> <a href="https://www.linkedin.com/in/jadey-ryan">linkedin.com/in/jadey-ryan</a></p>
+<p><i class="fa-brands fa-mastodon fa-xl" aria-label="mastodon"></i> <a href="https://fosstodon.org/@jadeynryan">@jadeynryan</a></p>
+<p><i class="fa-solid fa-briefcase fa-xl" aria-label="briefcase"></i> <a href="https://agr.wa.gov/agscience">WA Dept. of Agriculture Webpage</a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><a href="https://tinyurl.com/quarto-params"><img data-src="images/qr.png" style="max-" alt="QR code to slides." height="300"></a></p>
+</figure>
+</div>
+</div><div class="fragment column" style="width:50%;">
+<p><img data-src="images/upside_down_skye.jpg"></p>
+</div>
+</div>
+<p><img src="images/logo-wsda-color.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://jadeynryan.github.io/2023_posit-parameterized-quarto/"><i class="fa-solid fa-display" aria-label="display"></i> tinyurl.com/quarto-params</a></p>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="2023_posit-parameterized-quarto_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+              // target, if specified
+              link.setAttribute("target", "_blank");
+          }
+        }
+    });
+    </script>
+    
+    
+
+</body></html>
