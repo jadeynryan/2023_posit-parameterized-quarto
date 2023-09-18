@@ -1,0 +1,641 @@
+---
+title: "Parameterized Quarto reports improve understanding of soil health"
+author: "<br><br><br><strong>Jadey Ryan</strong><br>Molly McIlquham, Kwabena Sarpong, Leslie Michel, <br>Teal Potter, Deirdre Griffin LaHue, Dani Gelardi<br><br>posit::conf(2023) | September 20"
+execute: 
+  echo: true
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    theme: "style.scss"
+    highlight-style: a11y-dark
+    logo: images/logo-wsda-color.png
+    footer: "[{{< fa solid display >}}  bit.ly/quarto-params](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)"
+    link-external-newwindow: true
+    slide-number: c/t
+    df-print: kable
+from: markdown+emoji
+---
+
+```{r, include = FALSE}
+library(washi)
+data <- read.csv("data/exampleData.csv", check.names = FALSE) |> 
+  dplyr::select(year, sampleId, farmer, crop, `sand_%`, `silt_%`, `clay_%`)
+```
+
+## Don't care about soils?
+
+::: {.r-stack}
+![](images/ocean_floor.png){.fragment .fade-in-then-out height="700" fig-alt="RStudio RMarkdown parameterized report project for mapping ocean floors."}
+
+![](images/urban_institute.png){.fragment .fade-in-then-out height="700" fig-alt="Report for Alabama spending with text and plots generated from parameterized RMarkdown."}
+
+![](images/driver_quality.png){.fragment .fade-in-then-out height="700" fig-alt="Report for Alaska driver quality with text, plot, and table generated from parameterized RMarkdown."}
+:::
+
+::: notes
+Data don't make a difference, the people do. So it's our responsibility to make the data and results understandable and interpretable for the people who have the power to make a difference. Parameterized reports are one way to democratize data.
+:::
+
+## I went from
+
+::: columns
+::: {.column width="50%"}
+water scooping technician
+
+![](images/sampling.jpg){fig-alt="Jadey in waders setting up a transect with a measuring tape to measure flow in a small stream."}
+:::
+
+::: {.column width="50%"}
+::: fragment
+to data scientist
+
+![](images/mai.jpg){fig-alt="Jadey's cat, Mai, sitting on her laptop that has RStudio open. The monitor next to the laptop and cat has the R Packages book by Hadley Wickham and Jenny Bryan open."}
+:::
+:::
+:::
+
+::: notes
+No CS or coding background. Went from picking leeches off my boots to picking my cat off my keyboard.
+:::
+
+## How?
+
+::: columns
+::: {.column width="65%"}
+::: fragment
+*With a skills test!* <br><br>
+:::
+
+::: fragment
+**Task:** generate custom Soil Health Reports for each individual farmer
+
+<br>
+:::
+
+::: fragment
+**Timeframe:** one week
+
+<br>
+:::
+
+::: fragment
+**Challenge:** how do I automate custom reports???
+:::
+:::
+
+::: {.column width="35%"}
+::: fragment
+![](images/confused_tai.jpg){fig-alt="Cat with an expression of existential dread" style="max-height:700px"}
+:::
+:::
+:::
+
+## 2021: RMarkdown \> MS Word \> PDF
+
+::: {layout-ncol="2"}
+![](images/2021_pg1.png){fig-alt="Cover page of 2021 report with project summary" style="max-height:700px"}
+
+![](images/2021_pg4.png){fig-alt="Example 2021 report with box plots" style="max-height:700px"}
+:::
+
+::: notes
+MS Word much easier and faster to get started with beautiful styling compared to LaTex.
+:::
+
+## 2023: HTML with Quarto!
+
+![](images/report_html.png){fig-alt="Beginning of 2023 example HTML report"}
+
+## and MS Word to PDF
+
+::: {layout-ncol="2"}
+![](images/2023_pg1.png){fig-alt="First page of 2023 example MS Word report" style="max-height:725px"}
+
+![](images/2023_pg11.png){fig-alt="Page from example MS Word report showing soil texture triangle" style="max-height:725px"}
+:::
+
+::: notes
+Still haven't learned LaTex, and not sure I'm going to?
+:::
+
+## Don't worry about taking good notes
+
+All slides with code snippets and resources are available at:
+
+[[bit.ly/quarto-params](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)]{style="font-size: 1.5em;font-weight: bold;"}
+
+[![](images/qr.png){fig-alt="QR code to slides." width="300"}](https://rpubs.com/jadeynryan/parameterized_quarto_posit2023)
+
+## Workflow
+
+::: columns
+::: {.column width="50%"}
+![](images/mermaid.svg){fig-alt="Flow chart of workflow: Learn about parameterized reports, prepare subsettable data, create content for easy consumption, design for accessibility." style="max-height:750px"}
+:::
+
+::: {.column .fragment width="50%"}
+Parameterized reports work with both `Knitr` and `Jupyter` engines.
+
+![](images/typing_tai.jpg){fig-alt="Cat typing on laptop." style="max-height:600px"}
+:::
+:::
+
+# --- Step 1 --- <br> Learn about parameterized reports {background-color="#023B2C"}
+
+## What are parameterized reports?
+
+::: r-stack
+![](images/template1.png){.fragment fig-alt="File with the word '.qmd' inside and the word 'Function' above." fig-align="center" width="1300"}
+
+![](images/template2.png){.fragment fig-alt="An arrow points from 'Input' with 'params$year' to the previous image with 'Function' and '.qmd' file." fig-align="center" width="1300"}
+
+![](images/template3.png){.fragment fig-alt="In addition to the previous two images, arrows point to five reports with years 2019 through 2023 on them in a flow chart." fig-align="center" width="1300"}
+:::
+
+## YAML Header: Yet Another Markdown Language
+
+```{yaml}
+#| code-line-numbers: 2|3-5|6-8|11
+---
+title: "Soil Health Report"               # Metadata
+format:                                   # Set format types
+  html:                                     
+  docx:                            
+params:                                   # Set default parameters
+  farmer: Sammy Sunflower                   
+  year: 2023                                
+---
+    
+Report content goes here.                 # Write content
+```
+
+```{r, echo=FALSE}
+params <- list(
+  farmer = "Sammy Sunflower",
+  year = 2023
+)
+```
+
+## Access your parameters
+
+Run any line or chunk to add `params` to your environment.
+
+. . .
+
+`params` object is a list.
+
+```{r}
+str(params)
+```
+
+. . .
+
+Access with `$` notation.
+
+```{r}
+params$farmer
+```
+
+. . .
+
+For inline code, enclose the expression in `` `r ` ``.
+
+```{markdown}
+These are results for `r params$farmer` from `r params$year`.
+```
+
+These are results for `r params$farmer` from `r params$year`.
+
+## Render with the RStudio IDE
+
+![](images/render.png){fig-alt="RStudio Quarto Render button with a dropdown for HTML and MS Word with Render on Save option checked"}
+
+**Render Button**, keyboard shortcut `Ctrl + Shift + K`, or by saving
+
+. . .
+
+Uses default parameters in the YAML.
+
+. . .
+
+Output file has same name and location as input file.
+
+## Render with `quarto::quarto_render()`
+
+```{r eval=FALSE}
+#| code-line-numbers: "|2|3|4|5-7"
+quarto::quarto_render(
+  input = "producer_report.qmd",                    # Input Quarto file
+  output_format = "html",                           # Output format
+  output_file = "2022_OscarOrchard_Report.html",    # Output file name
+  execute_params = list(                            # List of parameters
+    farmer = "Oscar Orchard",
+    year = 2022
+  )
+```
+
+## Render all reports at once
+
+Create a data frame with:
+
+::: incremental
+-   `output_file` (filename)
+-   `execute_params` (named list of parameters)
+:::
+
+. . .
+
+```{r}
+#| code-fold: true
+reports <- data |>
+  dplyr::distinct(farmer, year) |>
+  dplyr::mutate(
+    output_file = paste0(
+      year, "_", gsub(" ", "", farmer), "_Report.html"
+    ),
+    execute_params = purrr::map2(
+      farmer, year,
+      \(x, y) list(farmer = x, year = y)
+    )
+  ) |> 
+  dplyr::select(output_file, execute_params)
+
+head(reports, 3)
+```
+
+## Render all reports at once
+
+Map over each row of the `reports` dataframe.
+
+```{r eval=FALSE}
+reports |>
+  purrr::pwalk(
+    quarto::quarto_render,
+    input = "template.qmd",
+    output_format = "html"  
+    )
+```
+
+## 
+
+{{< video videos/render_reports.mp4 >}}
+
+## 
+
+![](images/surprise_mai.jpg){fig-alt="Surprised cat next to the surprised Pikachu meme." fig-align="center"}
+
+# --- Step 2 --- <br>Prepare subsettable data {background-color="#023B2C"}
+
+## Our simple data
+
+```{r}
+data |> 
+  head()
+```
+
+::: notes
+dummy punny farmer names from Chat GPT
+:::
+
+## Use `params` to set up comparisons
+
+```{r eval=FALSE}
+#| code-line-numbers: "2|"
+data |> 
+  dplyr::filter(farmer == params$farmer) |> 
+  more data wrangling
+```
+
+```{r}
+#| code-fold: true
+#| code-line-numbers: "3"
+# Get the farmer's crops
+farmer_crop <- data |>
+  dplyr::filter(farmer == params$farmer) |>
+  dplyr::pull(crop) |>
+  unique()
+
+data_long <- data |>
+  # Tidy data: one observation per row
+  tidyr::pivot_longer(cols = c("sand_%":"clay_%"),
+                    names_to = "measurement") |> 
+  dplyr::mutate(
+    # Categorize samples based on if they are from the farmer of
+    # interest or are of the same crop type
+    category = dplyr::case_when(
+      farmer == params$farmer ~ "Your fields",
+      crop %in% farmer_crop ~ "Same crop",
+      TRUE ~ "Other fields"
+    )
+  )
+
+# Set category factor levels
+data_long$category <- factor(
+  data_long$category,
+  levels = c("Other fields", "Same crop", "Your fields"),
+  labels = c("Other fields", "Same crop", "Your fields")
+)
+
+data_long |> 
+  dplyr::select(-c(year, sampleId)) |> 
+  dplyr::slice_head(by = category) |> 
+  kableExtra::kable() |> 
+  kableExtra::column_spec(5, background = "#FDCE86")
+```
+
+# --- Step 3 --- <br>Create content for easy consumption {background-color="#023B2C"}
+
+## Interpretation through comparison
+
+Show how their results compare to other samples in similar contexts.
+
+```{r}
+#| code-fold: true
+library(ggplot2)
+set.seed(123)
+data_long |>
+  ggplot(aes(
+    x = measurement,
+    y = value,
+    color = category,
+    shape = category,
+    size = category,
+    alpha = category
+  )) +
+  geom_jitter(width = 0.2) +
+  # Define styles for producer's samples versus all samples
+  scale_alpha_manual(values = c(
+    "Other fields" = 0.5,
+    "Same crop" = 1,
+    "Your fields" = 1
+  )) +
+  scale_color_manual(values = c(
+    "Other fields" = "#CCC29C",
+    "Same crop" = "#76ADBC",
+    "Your fields" = "#A60F2D"
+  )) +
+  scale_size_manual(values = c(
+    "Other fields" = 2,
+    "Same crop" = 4,
+    "Your fields" = 4
+  )) +
+  washi::washi_theme(
+    legend_position = "bottom",
+    gridline_x = FALSE,
+    gridline_y = FALSE,
+    text_scale = 1.5
+  ) +
+  theme(legend.title = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        panel.border = element_rect(color = "gray", fill = NA))
+```
+
+## Make your reports self-contained
+
+::: columns
+::: {.column width="50%"}
+Embed everything in your HTML file.
+
+```{yaml}
+---
+format: 
+  html:
+    embed-resources: true
+---
+```
+:::
+
+::: {.fragment .column width="50%"}
+Be mindful of file size.
+
+![](images/titanic_tai.png){fig-alt="Cat on sinking Titanic meme." style="max-height:600px"}
+:::
+:::
+
+## Make your reports self-contained
+
+Provide your reader the context to understand the results.
+
+```{markdown}
+## What We Measured in Your Soil
+
+{{< include soil_health_measurements.qmd >}}
+```
+
+`Includes` shortcodes make it easy to reuse information across reports.
+
+# --- Step 4 --- <br>Design for accessibility {background-color="#023B2C"}
+
+## Conditional markdown
+
+```{markdown}
+#| code-line-numbers: "1|"
+:::: {.content-visible when-format="html"}
+
+::: panel-tabset
+
+Background on soil measurements.
+
+:::
+  
+::::
+```
+
+. . .
+
+![](images/tabset.png){fig-alt="Screenshot of soil measurement tabset in HTML report."}
+
+## Conditional markdown
+
+```{markdown}
+#| code-line-numbers: "1|"
+:::: {.content-visible unless-format="html"}
+
+Background on soil measurements.
+
+::::
+```
+
+. . .
+
+![](images/no_tabset.png){fig-alt="Screenshot of soil measurements without tabset in MS Word report."}
+
+## Conditional code evaluation
+
+Get the output format type in your setup chunk.
+
+```{r setup}
+#| echo: fenced
+# Get output file type
+out_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+```
+
+## Conditional code evaluation
+
+Use `out_type` in chunk options to control code evaluation.
+
+. . .
+
+Interactive plot for HTML reports:
+
+```{r}
+#| echo: fenced
+#| eval: !expr out_type == "html"
+
+# code to create interactive {plotly}
+```
+
+<br>
+
+. . .
+
+Static plot for MS Word reports:
+
+```{r}
+#| echo: fenced
+#| eval: !expr out_type == "docx"
+
+# code to create static {ggplot2}
+```
+
+## Style with font size and color contrast in mind
+
+[![](images/contrast_checker.png){fig-alt="Screenshot of color contrast tool."}](https://colourcontrast.cc/)
+
+## Style with font size and color contrast in mind
+
+[![](images/viz_palette.png){fig-alt="Screenshot of viz-palette color palette tool."}](https://projects.susielu.com/viz-palette)
+
+## Style with font size and color contrast in mind
+
+```{yaml}
+#| code-line-numbers: 4|6
+---
+format:                                     
+  html:                                     
+    css: styles.css               # Style for HTML output
+  word_document:                            
+    reference_docx: styles.docx   # Style for MS Word output
+---
+```
+
+## Use browser developer tools to check
+
+![](images/dev_tools.png){fig-alt="To get to developer tools: Right-click > Inspect > Ctrl + Shift + C > Hover over element. You can see contrast checker when hovering over any HTML element."}
+
+## Use browser developer tools to check
+
+![](images/dev_tools2.png){fig-alt="Clicking on the color attribute in the inspector pane opens a dialog that allows you to see the contrast ratio and adjust the color to meet accessibility guidelines."}
+
+## Recap
+
+::: columns
+::: {.column width="50%"}
+![](images/mermaid.svg){fig-alt="Flow chart of workflow: Learn about parameterized reports, prepare subsettable data, create content for easy consumption, design for accessibility." style="max-height:750px"}
+:::
+
+::: {.fragment .column width="50%"}
+![](images/tv_mai.jpg){fig-alt="Cat falling asleep in human's lap with a phone with video playing on the sleepy cat's belly." style="max-height:750px"}
+:::
+:::
+
+## Example 2023 HTML Report: bit.ly/soil-html
+
+[![](images/report_html.png){fig-alt="Beginning of 2023 example HTML report"}](https://wa-department-of-agriculture.github.io/soils/articles/html.html)
+
+## Example 2023 MS Word Report: bit.ly/soil-docx
+
+[![](images/2023_pg1.png){style="max-" fig-alt="First page of 2023 example MS Word report" height="750"}](https://wa-department-of-agriculture.github.io/soils/articles/docx.html)
+
+# --- Resources --- {background-color="#023B2C"}
+
+## Quarto
+
+-   **Documentation and blogs**
+    -   [Getting Started Documentation](https://quarto.org/docs/get-started/)
+    -   [We don't talk about Quarto (Alison Hill)](https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/)
+    -   [Quarto Tip of the Day (Mine Çetinkaya-Rundel)](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/)
+-   **Videos**
+    -   [Hello Quarto Keynote from rstudio::conf(2022) (Mine Çetinkaya-Rundel & Julia Stewart Lowndes)](https://www.youtube.com/watch?v=p7Hxu4coDl8)
+    -   [Get Started with Quarto (Mine Çetinkaya-Rundel)](https://youtu.be/_f3latmOhew?si=mOhOPI__32XcmveT)
+    -   [Welcome to Quarto Workshop (Tom Mock)](https://www.youtube.com/live/yvi5uXQMvu4?si=smcZL2BJqlrlm_a6)
+    -   [Beautiful Reports and Presentations with Quarto (Tom Mock)](https://www.youtube.com/live/hbf7Ai3jnxY?si=t6hHleQe-4sbr7pE)
+
+## Read about parameterized reports
+
+-   [Quarto Documentation: Parameters](https://quarto.org/docs/computations/parameters.html)
+-   [R Markdown: The Definitive Guide Chapter 15 (Yihui Xie, J. J. Allaire, Garrett Grolemund)](https://bookdown.org/yihui/rmarkdown/parameterized-reports.html)
+-   [R Markdown Cookbook Chapter 17.4 (Yihui Xie, Christophe Dervieux, Emily Riederer)](https://bookdown.org/yihui/rmarkdown-cookbook/parameterized-reports.html)
+-   [R Without Statistics Chapter 7 (David Keyes)](https://book.rwithoutstatistics.com/parameterized-reports-chapter.html)
+
+## Examples of parameterized reports
+
+-   **RMarkdown**
+    -   [groundwater monitoring by county (R4WRDS)](https://www.r4wrds.com/intermediate/m_parameterized_reports)
+    -   [gapminder reports by year (Drew Seewald)](https://towardsdatascience.com/parameters-in-r-markdown-ade0cfac0c9b)
+    -   [bad driver fact sheets by state (Aaron Williams)](https://urban-institute.medium.com/iterated-fact-sheets-with-r-markdown-d685eb4eafce)
+    -   [iris dataset by species (Zachary M. Smith)](https://zsmith27.github.io/rmarkdown_crash-course/lesson-7-parameterized-reports.html)
+    -   [Dawson's Creek by episode (Matt Dray)](https://www.rostrum.blog/posts/2018-06-26-mail-merge/)
+-   **Quarto**
+    -   [elevator reports by region and state (Mike Mahoney)](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/)
+    -   [penguins dataset by species and year(Meghan Hall)](https://meghan.rbind.io/blog/quarto-pdfs/)
+
+## Videos about parameterized reports
+
+-   [Parameterized Reporting with R (David Keyes)](https://rfortherestofus.com/2020/10/parameterized-reporting-with-rmarkdown/)
+-   [R Markdown: YAML, Parameters (Data Science for Everyone)](https://www.youtube.com/watch?v=8eoncQ457Yg)
+-   [Rmarkdown Guide - Parameterized Reports (TidyX Ellis Hughes & Patrick Ward)](https://www.youtube.com/watch?v=DkQEpqySylc&t=387s)
+-   [Using rmarkdown and parameterised reports (Mike K Smith)](https://www.youtube.com/watch?v=p55q2szc3I8&t=15s)
+-   [Extreme Rmarkdown report automation with parameters and templates (Bruno Rodrigues)](https://www.youtube.com/watch?v=mFEEkOYvAZg)
+-   [Parameterized R Markdown reports with RStudio Connect (Aron Atkins)](https://posit.co/resources/videos/parameterized-r-markdown-reports-with-rstudio-connect/)
+-   [Reproducible Templates for Analysis and Dissemination Free Coursera Class (Emory University)](https://www.coursera.org/lecture/reproducible-templates-analysis/adding-parameters-in-a-document-template-6fQwc)
+
+## Style sheets
+
+-   **HTML**
+    -   [Quarto Documentation: CSS Styles](https://quarto.org/docs/output-formats/html-basics.html#css-styles)
+-   **MS Word**
+    -   [Quarto Documentation: Docx Style Template](https://quarto.org/docs/output-formats/ms-word-templates.html)
+    -   [Create A MS Word Template for R Markdown (Video by Yihui Xie)](https://vimeo.com/110804387)
+
+## Accessibility tools
+
+[Web Content Accessibility Guidelines (WCAG) Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/)
+
+-   **Pick your colors**
+    -   [Colour Contrast Checker](https://colourcontrast.cc/)
+    -   [Viz Palette](https://projects.susielu.com/viz-palette)
+    -   [Chroma.js Color Palette](https://color.adobe.com/create/color-wheel/)
+    -   [Adobe Color Wheel](https://color.adobe.com/create/color-wheel/)
+-   **Check your colors**
+    -   [Color Blindness Simulator](http://www.color-blindness.com/coblis-color-blindness-simulator/)
+    -   [`colorblindr` package](https://github.com/clauswilke/colorblindr)
+
+## Check HTML reports with browser `Inspect` tool
+
+-   [Microsoft Edge Accessibility Guide](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/accessibility/test-inspect-tool)
+-   [Google Chrome Accessibility Features Reference](https://developer.chrome.com/docs/devtools/accessibility/reference/)
+
+## I'd love to connect with you!
+
+::: columns
+::: {.column width="50%"}
+{{< fa solid display >}} [Slides](https://jadeynryan.quarto.pub/parameterized-quarto-posit-2023/)
+
+{{< fa brands github size=xl >}} [jadeynryan](https://github.com/jadeynryan/)
+
+{{< fa brands linkedin size=xl >}} [linkedin.com/in/jadey-ryan](https://www.linkedin.com/in/jadey-ryan)
+
+{{< fa brands mastodon size=xl >}} [\@jadeynryan](https://fosstodon.org/@jadeynryan)
+
+{{< fa solid briefcase size=xl >}} [WA Dept. of Agriculture Webpage](https://agr.wa.gov/agscience)
+
+[![](images/qr.png){style="max-" fig-alt="QR code to slides." fig-align="left" height="300"}](https://bit.ly/quarto-params)
+:::
+
+::: {.fragment .column width="50%"}
+![](images/upside_down_skye.jpg)
+:::
+:::
