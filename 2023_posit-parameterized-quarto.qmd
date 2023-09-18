@@ -277,9 +277,13 @@ reports |>
     )
 ```
 
-## 
+## {visibility="hidden"}
 
 {{< video videos/render_reports.mp4 >}}
+
+## 
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/FzhwFt4V8r69FSVIIT" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/FzhwFt4V8r69FSVIIT"></a></p>
 
 ## 
 
