@@ -24,21 +24,27 @@ data <- read.csv("data/exampleData.csv", check.names = FALSE) |>
 
 ## Don't care about soils?
 
+Parameterized reporting is for everyone!
+
+::: columns
+::: {.column width="33%"}
 ![](images/ocean_floor.png){fig-alt="RStudio RMarkdown parameterized report project for mapping ocean floors."}
 
 [Ocean floor maps](https://rmarkdown.rstudio.com/lesson-6.html)
+:::
 
-## Don't care about soils?
-
+::: {.column width="33%"}
 ![](images/urban_institute.png){fig-alt="Report for Alabama spending with text and plots generated from parameterized RMarkdown."}
 
 [Fiscal briefs](https://book.rwithoutstatistics.com/parameterized-reports-chapter.html)
+:::
 
-## Don't care about soils?
-
+::: {.column width="33%"}
 ![](images/driver_quality.png){fig-alt="Report for Alaska driver quality with text, plot, and table generated from parameterized RMarkdown."}
 
 [Bad drivers](https://urban-institute.medium.com/iterated-fact-sheets-with-r-markdown-d685eb4eafce)
+:::
+:::
 
 ::: notes
 My point is the data don't make a difference. The people do. So it's our responsibility to make the data and results understandable and interpretable for the people who have the power to make a difference. Parameterized reports are one way to democratize data and reward people for data collection efforts.
@@ -48,7 +54,7 @@ My point is the data don't make a difference. The people do. So it's our respons
 
 ::: columns
 ::: {.column width="50%"}
-I was hired as an environmental technician.
+Hired as an environmental technician.
 
 ![](images/sampling.jpg){fig-alt="Jadey in waders setting up a transect with a measuring tape to measure flow in a small stream."}
 :::
@@ -61,6 +67,10 @@ Then transitioned to data scientist.
 :::
 :::
 :::
+
+. . .
+
+I went from picking leeches off my boots to picking cats off my keyboard!
 
 ::: notes
 No CS or coding background. Went from picking leeches off my boots to picking my cat off my keyboard.
@@ -116,15 +126,15 @@ MS Word much easier and faster to get started with beautiful styling compared to
 
 ## and MS Word to PDF
 
+. . .
+
+...because LaTeX :confounded: :shrug:
+
 ::: {layout-ncol="2"}
 ![](images/2023_pg1.png){fig-alt="First page of 2023 example MS Word report" style="max-height:625px"}
 
 ![](images/2023_pg11.png){fig-alt="Page from example MS Word report showing soil texture triangle" style="max-height:625px"}
 :::
-
-. . .
-
-...because LaTeX :confounded: :shrug:
 
 ::: notes
 Still haven't learned LaTex, and not sure I'm going to?
@@ -132,9 +142,9 @@ Still haven't learned LaTex, and not sure I'm going to?
 
 ## Code snippets and 7 pages of resources
 
-We're end of conference tired :yawning_face: and our brains are full :dizzy_face:.
+We're end-of-conference tired :yawning_face: and our brains are full :dizzy_face:.
 
-Don't worry about taking notes or pictures.
+Don't worry about taking notes or copying code.
 
 [![Slides at tinyurl.com/quarto-params](images/qr.png){fig-alt="QR code to slides." fig-align="left" height="400"}](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
 
@@ -146,7 +156,7 @@ Don't worry about taking notes or pictures.
 :::
 
 ::: {.column .fragment width="50%"}
-Parameterized reports work with both `Knitr` and `Jupyter` engines.
+Parameterized Quarto reports work with both `Knitr` and `Jupyter` engines.
 
 ![](images/typing_tai.jpg){fig-alt="Cat typing on laptop." style="max-height:600px"}
 :::
@@ -169,16 +179,16 @@ Parameterized reports work with both `Knitr` and `Jupyter` engines.
 ```{yaml}
 #| code-line-numbers: 2|3-5|6-8|11
 ---
-title: "Soil Health Report"               # Metadata
-format:                                   # Set format types
+title: "Soil Health Report"         # Metadata
+format:                             # Set format types
   html:                                     
   docx:                            
-params:                                   # Set default parameters
+params:                             # Set default parameter key-value pairs
   farmer: Sammy Sunflower                   
   year: 2023                                
 ---
     
-Report content goes here.                 # Write content
+Report content goes here.           # Write content
 ```
 
 ```{r, echo=FALSE}
@@ -213,16 +223,16 @@ params$farmer
 For inline code, enclose the expression in `` `r ` ``.
 
 ```{markdown}
-These are results for `r params$farmer` from `r params$year`.
+These are results for `r params$farmer`.
 ```
 
-These are results for `r params$farmer` from `r params$year`.
+These are results for `r params$farmer`.
 
 ## Render with the RStudio IDE
 
 ![](images/render.png){fig-alt="RStudio Quarto Render button with a dropdown for HTML and MS Word with Render on Save option checked"}
 
-**Render Button**, keyboard shortcut `Ctrl + Shift + K`, or by saving
+**Render Button**, keyboard shortcut `Ctrl + Shift + K`, or by saving.
 
 . . .
 
@@ -234,7 +244,7 @@ Output file has same name and location as input file.
 
 ## Render with `quarto::quarto_render()`
 
-Programmatically render reports in `Console` or another `.R` script.
+Use in `Console` or an `iterate.R` script.
 
 <br>
 
@@ -244,7 +254,7 @@ quarto::quarto_render(
   input = "template.qmd",                           # Input Quarto file
   output_format = "html",                           # Output format
   output_file = "2022_OscarOrchard_Report.html",    # Output file name
-  execute_params = list(                            # List of parameters
+  execute_params = list(                            # Named list of parameters
     farmer = "Oscar Orchard",
     year = 2022
   )
@@ -255,8 +265,8 @@ quarto::quarto_render(
 Create a data frame with two columns that match `quarto_render()` args:
 
 ::: incremental
--   `output_file` (filename.ext)
--   `execute_params` (named list of parameters)
+-   `output_file`: filename.ext
+-   `execute_params`: named list of parameters
 :::
 
 . . .
@@ -292,11 +302,11 @@ reports |>
     )
 ```
 
-##  {visibility="hidden"}
+## 
 
 {{< video videos/render_reports.mp4 >}}
 
-## 
+##  {visibility="hidden"}
 
 ::: {style="width:100%;height:0;padding-bottom:56%;position:relative;"}
 <iframe src="https://giphy.com/embed/FzhwFt4V8r69FSVIIT" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
@@ -314,14 +324,18 @@ reports |>
 
 ## Our simple data
 
-```{r}
+```{r, echo=FALSE}
 data |> 
-  head()
+  head() |> 
+  kableExtra::kable() |> 
+  kableExtra::column_spec(c(1,3), background = "#FDCE86")
 ```
 
-::: notes
-dummy punny farmer names from Chat GPT
-:::
+<br>
+
+. . .
+
+fake farmer names: ChatGPT 🙏🏻
 
 ## Use `params` to set up comparisons
 
@@ -433,6 +447,8 @@ Instead of \~300 lines of markdown:
 {{< include soil_health_measurements.qmd >}}
 ```
 
+<br>
+
 `Includes` shortcodes make it easy to reuse information across reports.
 
 ## Make your HTML reports self-contained
@@ -440,6 +456,7 @@ Instead of \~300 lines of markdown:
 ::: columns
 ::: {.column width="50%"}
 ```{yaml}
+# Include in YAML
 ---
 format: 
   html:
@@ -534,13 +551,21 @@ Static plot for MS Word reports:
 
 ## Style with font size and color contrast in mind
 
+::: columns
+::: {.column width="50%"}
 [![](images/contrast_checker.png){fig-alt="Screenshot of color contrast tool."}](https://colourcontrast.cc/)
 
-## Style with font size and color contrast in mind
+[Colour Contrast](https://colourcontrast.cc/)
+:::
 
+::: {.column width="50%"}
 [![](images/viz_palette.png){fig-alt="Screenshot of viz-palette color palette tool."}](https://projects.susielu.com/viz-palette)
 
-## Style with font size and color contrast in mind
+[Viz Palette](https://projects.susielu.com/viz-palette)
+:::
+:::
+
+## Use style sheets and templates
 
 ```{yaml}
 #| code-line-numbers: 5|7
@@ -652,6 +677,8 @@ Check out an [example HTML report](https://rawcdn.githack.com/WA-Department-of-A
 
 ## I'd love to connect with you!
 
+My three fave things: cats, nature, and R/Quarto.
+
 ::: columns
 ::: {.column width="50%"}
 {{< fa solid display >}} [Slides](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
@@ -668,6 +695,6 @@ Check out an [example HTML report](https://rawcdn.githack.com/WA-Department-of-A
 :::
 
 ::: {.fragment .column width="50%"}
-![](images/upside_down_skye.jpg)
+![](images/upside_down_skye.jpg){height="600"}
 :::
 :::

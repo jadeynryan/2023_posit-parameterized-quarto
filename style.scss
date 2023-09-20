@@ -67,7 +67,7 @@ details>summary {
 .reveal .footer {
   color: $theme-blue;
   font-family: $font-family-sans-serif;
-  padding-bottom: 25px;
+  padding-bottom: 0px;
 }
 
 .reveal .slide-logo {
@@ -83,12 +83,6 @@ details>summary {
     padding-left: 20px;
     color: $theme-blue;
   }
-
-.reveal .progress {
-  background: rgba(0, 0, 0, 0.2);
-  color: $theme-gold;
-  height: 3%;
-}
 
 .reveal .slide-number {
   color: $theme-blue;
