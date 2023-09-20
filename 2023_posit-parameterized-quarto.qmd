@@ -10,9 +10,8 @@ format:
     theme: "style.scss"
     highlight-style: a11y-dark
     logo: images/logo-wsda-color.png
-    footer: "[{{< fa solid display >}}  tinyurl.com/quarto-params](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)"
+    footer: "[{{< fa solid display >}}  tinyurl.com/quarto-params](https://jadeynryan.github.io/2023_posit-parameterized-quarto/) [{{< fa brands mastodon >}} @jadeynryan](https://fosstodon.org/@jadeynryan)"
     link-external-newwindow: true
-    slide-number: c/t
     df-print: kable
 from: markdown+emoji
 ---
@@ -25,30 +24,38 @@ data <- read.csv("data/exampleData.csv", check.names = FALSE) |>
 
 ## Don't care about soils?
 
-::: {.r-stack}
-![](images/ocean_floor.png){.fragment .fade-in-then-out height="700" fig-alt="RStudio RMarkdown parameterized report project for mapping ocean floors."}
+![](images/ocean_floor.png){fig-alt="RStudio RMarkdown parameterized report project for mapping ocean floors."}
 
-![](images/urban_institute.png){.fragment .fade-in-then-out height="700" fig-alt="Report for Alabama spending with text and plots generated from parameterized RMarkdown."}
+[Ocean floor maps](https://rmarkdown.rstudio.com/lesson-6.html)
 
-![](images/driver_quality.png){.fragment .fade-in-then-out height="700" fig-alt="Report for Alaska driver quality with text, plot, and table generated from parameterized RMarkdown."}
-:::
+## Don't care about soils?
+
+![](images/urban_institute.png){fig-alt="Report for Alabama spending with text and plots generated from parameterized RMarkdown."}
+
+[Fiscal briefs](https://book.rwithoutstatistics.com/parameterized-reports-chapter.html)
+
+## Don't care about soils?
+
+![](images/driver_quality.png){fig-alt="Report for Alaska driver quality with text, plot, and table generated from parameterized RMarkdown."}
+
+[Bad drivers](https://urban-institute.medium.com/iterated-fact-sheets-with-r-markdown-d685eb4eafce)
 
 ::: notes
-Data don't make a difference, the people do. So it's our responsibility to make the data and results understandable and interpretable for the people who have the power to make a difference. Parameterized reports are one way to democratize data.
+My point is the data don't make a difference. The people do. So it's our responsibility to make the data and results understandable and interpretable for the people who have the power to make a difference. Parameterized reports are one way to democratize data and reward people for data collection efforts.
 :::
 
-## I went from
+## Why should you listen to me?
 
 ::: columns
 ::: {.column width="50%"}
-water scooping technician
+I was hired as an environmental technician.
 
 ![](images/sampling.jpg){fig-alt="Jadey in waders setting up a transect with a measuring tape to measure flow in a small stream."}
 :::
 
 ::: {.column width="50%"}
 ::: fragment
-to data scientist
+Then transitioned to data scientist.
 
 ![](images/mai.jpg){fig-alt="Jadey's cat, Mai, sitting on her laptop that has RStudio open. The monitor next to the laptop and cat has the R Packages book by Hadley Wickham and Jenny Bryan open."}
 :::
@@ -59,10 +66,10 @@ to data scientist
 No CS or coding background. Went from picking leeches off my boots to picking my cat off my keyboard.
 :::
 
-## How?
+## How did I go from a 'non-coder' to a data scientist?
 
 ::: columns
-::: {.column width="65%"}
+::: {.column width="55%"}
 ::: fragment
 *With a skills test!* <br><br>
 :::
@@ -84,14 +91,14 @@ No CS or coding background. Went from picking leeches off my boots to picking my
 :::
 :::
 
-::: {.column width="35%"}
-::: fragment
-![](images/confused_tai.jpg){fig-alt="Cat with an expression of existential dread" style="max-height:700px"}
-:::
+::: {.column width="45%"}
+![](images/confused_tai.jpg){.fragment fig-alt="Cat with an expression of existential dread" style="max-height:500px"}
+
+[YouTube and blog rabbit holes & tutorial hell...]{.fragment}
 :::
 :::
 
-## 2021: RMarkdown \> MS Word \> PDF
+## 2021: the reports that got me my job
 
 ::: {layout-ncol="2"}
 ![](images/2021_pg1.png){fig-alt="Cover page of 2021 report with project summary" style="max-height:700px"}
@@ -103,29 +110,33 @@ No CS or coding background. Went from picking leeches off my boots to picking my
 MS Word much easier and faster to get started with beautiful styling compared to LaTex.
 :::
 
-## 2023: HTML with Quarto!
+## 2023: new HTML reports with Quarto!
 
 ![](images/report_html.png){fig-alt="Beginning of 2023 example HTML report"}
 
 ## and MS Word to PDF
 
 ::: {layout-ncol="2"}
-![](images/2023_pg1.png){fig-alt="First page of 2023 example MS Word report" style="max-height:725px"}
+![](images/2023_pg1.png){fig-alt="First page of 2023 example MS Word report" style="max-height:625px"}
 
-![](images/2023_pg11.png){fig-alt="Page from example MS Word report showing soil texture triangle" style="max-height:725px"}
+![](images/2023_pg11.png){fig-alt="Page from example MS Word report showing soil texture triangle" style="max-height:625px"}
 :::
+
+. . .
+
+...because LaTeX :confounded: :shrug:
 
 ::: notes
 Still haven't learned LaTex, and not sure I'm going to?
 :::
 
-## Don't worry about taking good notes
+## Code snippets and 7 pages of resources
 
-All slides with code snippets and resources are available at:
+We're end of conference tired :yawning_face: and our brains are full :dizzy_face:.
 
-**[tinyurl.com/quarto-params](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)**
+Don't worry about taking notes or pictures.
 
-[![](images/qr.png){fig-alt="QR code to slides." style="max-height:500px"}](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
+[![Slides at tinyurl.com/quarto-params](images/qr.png){fig-alt="QR code to slides." fig-align="left" height="400"}](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
 
 ## Workflow
 
@@ -223,10 +234,14 @@ Output file has same name and location as input file.
 
 ## Render with `quarto::quarto_render()`
 
+Programmatically render reports in `Console` or another `.R` script.
+
+<br>
+
 ```{r eval=FALSE}
 #| code-line-numbers: "|2|3|4|5-7"
 quarto::quarto_render(
-  input = "producer_report.qmd",                    # Input Quarto file
+  input = "template.qmd",                           # Input Quarto file
   output_format = "html",                           # Output format
   output_file = "2022_OscarOrchard_Report.html",    # Output file name
   execute_params = list(                            # List of parameters
@@ -237,10 +252,10 @@ quarto::quarto_render(
 
 ## Render all reports at once
 
-Create a data frame with:
+Create a data frame with two columns that match `quarto_render()` args:
 
 ::: incremental
--   `output_file` (filename)
+-   `output_file` (filename.ext)
 -   `execute_params` (named list of parameters)
 :::
 
@@ -277,17 +292,23 @@ reports |>
     )
 ```
 
-## {visibility="hidden"}
+##  {visibility="hidden"}
 
 {{< video videos/render_reports.mp4 >}}
 
 ## 
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/FzhwFt4V8r69FSVIIT" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/FzhwFt4V8r69FSVIIT"></a></p>
+::: {style="width:100%;height:0;padding-bottom:56%;position:relative;"}
+<iframe src="https://giphy.com/embed/FzhwFt4V8r69FSVIIT" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+:::
+
+<p><a href="https://giphy.com/gifs/FzhwFt4V8r69FSVIIT"></a></p>
 
 ## 
 
-![](images/surprise_mai.jpg){fig-alt="Surprised cat next to the surprised Pikachu meme." fig-align="center"}
+![](images/surprise_mai.jpg){fig-alt="Surprised cat next to the surprised Pikachu meme." fig-align="center" height="750px"}
 
 # --- Step 2 --- <br>Prepare subsettable data {background-color="#023B2C"}
 
@@ -398,29 +419,13 @@ data_long |>
 
 ## Make your reports self-contained
 
-::: columns
-::: {.column width="50%"}
-Embed everything in your HTML file.
-
-```{yaml}
----
-format: 
-  html:
-    embed-resources: true
----
-```
-:::
-
-::: {.fragment .column width="50%"}
-Be mindful of file size.
-
-![](images/titanic_tai.png){fig-alt="Cat on sinking Titanic meme." style="max-height:600px"}
-:::
-:::
-
-## Make your reports self-contained
-
 Provide your reader the context to understand the results.
+
+. . .
+
+<br>
+
+Instead of \~300 lines of markdown:
 
 ```{markdown}
 ## What We Measured in Your Soil
@@ -430,6 +435,28 @@ Provide your reader the context to understand the results.
 
 `Includes` shortcodes make it easy to reuse information across reports.
 
+## Make your HTML reports self-contained
+
+::: columns
+::: {.column width="50%"}
+```{yaml}
+---
+format: 
+  html:
+    embed-resources: true
+---
+```
+
+[Otherwise, no one knows what to do with a `_files` folder of dependencies.]{.fragment}
+:::
+
+::: {.fragment .column width="50%"}
+Be mindful of file size.
+
+![](images/titanic_tai.png){fig-alt="Cat on sinking Titanic meme." style="max-height:600px"}
+:::
+:::
+
 # --- Step 4 --- <br>Design for accessibility {background-color="#023B2C"}
 
 ## Conditional markdown
@@ -437,13 +464,11 @@ Provide your reader the context to understand the results.
 ```{markdown}
 #| code-line-numbers: "1|"
 :::: {.content-visible when-format="html"}
-
 ::: panel-tabset
 
 Background on soil measurements.
 
 :::
-  
 ::::
 ```
 
@@ -464,23 +489,28 @@ Background on soil measurements.
 
 . . .
 
-![](images/no_tabset.png){fig-alt="Screenshot of soil measurements without tabset in MS Word report."}
+![](images/no_tabset.png){fig-alt="Screenshot of soil measurements without tabset in MS Word report." height="500"}
 
 ## Conditional code evaluation
 
-Get the output format type in your setup chunk.
+Evaluate `plotly` code only for HTML reports and regular `ggplot2` code for anything else.
+
+. . .
+
+<br>
+
+Get the output format type in your setup chunk:
 
 ```{r setup}
 #| echo: fenced
+# Include in first chunk of .qmd
 # Get output file type
 out_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
 ```
 
 ## Conditional code evaluation
 
-Use `out_type` in chunk options to control code evaluation.
-
-. . .
+Use `out_type` in `eval` chunk option.
 
 Interactive plot for HTML reports:
 
@@ -492,8 +522,6 @@ Interactive plot for HTML reports:
 ```
 
 <br>
-
-. . .
 
 Static plot for MS Word reports:
 
@@ -515,7 +543,8 @@ Static plot for MS Word reports:
 ## Style with font size and color contrast in mind
 
 ```{yaml}
-#| code-line-numbers: 4|6
+#| code-line-numbers: 5|7
+# Include in YAML header:
 ---
 format:                                     
   html:                                     
@@ -525,23 +554,29 @@ format:
 ---
 ```
 
-## Use browser developer tools to check
+## Check HTML with browser developer tools
 
 ![](images/dev_tools.png){fig-alt="To get to developer tools: Right-click > Inspect > Ctrl + Shift + C > Hover over element. You can see contrast checker when hovering over any HTML element."}
 
-## Use browser developer tools to check
+## Check HTML with browser developer tools
 
 ![](images/dev_tools2.png){fig-alt="Clicking on the color attribute in the inspector pane opens a dialog that allows you to see the contrast ratio and adjust the color to meet accessibility guidelines."}
+
+## Everyone gets a custom decision-support tool!
+
+![](images/report_html.png){fig-alt="Beginning of 2023 example HTML report"}
+
+Check out an [example HTML report](https://rawcdn.githack.com/WA-Department-of-Agriculture/soils/944448976992604a12dafbf47258327be0e5ab98/inst/example_reports/example_producer_report.html).
 
 ## Recap
 
 ::: columns
 ::: {.column width="50%"}
-![](images/mermaid.svg){fig-alt="Flow chart of workflow: Learn about parameterized reports, prepare subsettable data, create content for easy consumption, design for accessibility." style="max-height:750px"}
+![](images/mermaid.svg){fig-alt="Flow chart of workflow: Learn about parameterized reports, prepare subsettable data, create content for easy consumption, design for accessibility." height="750px"}
 :::
 
 ::: {.fragment .column width="50%"}
-![](images/tv_mai.jpg){fig-alt="Cat falling asleep in human's lap with a phone with video playing on the sleepy cat's belly." style="max-height:750px"}
+![](images/tv_mai.jpg){fig-alt="Cat falling asleep in human's lap with a phone with video playing on the sleepy cat's belly." height="700px"}
 :::
 :::
 
@@ -621,11 +656,11 @@ format:
 ::: {.column width="50%"}
 {{< fa solid display >}} [Slides](https://jadeynryan.github.io/2023_posit-parameterized-quarto/)
 
-{{< fa brands github size=xl >}} [jadeynryan](https://github.com/jadeynryan/)
+{{< fa brands mastodon size=xl >}} [\@jadeynryan](https://fosstodon.org/@jadeynryan)
 
 {{< fa brands linkedin size=xl >}} [linkedin.com/in/jadey-ryan](https://www.linkedin.com/in/jadey-ryan)
 
-{{< fa brands mastodon size=xl >}} [\@jadeynryan](https://fosstodon.org/@jadeynryan)
+{{< fa brands github size=xl >}} [jadeynryan](https://github.com/jadeynryan/)
 
 {{< fa solid briefcase size=xl >}} [WA Dept. of Agriculture Webpage](https://agr.wa.gov/agscience)
 
