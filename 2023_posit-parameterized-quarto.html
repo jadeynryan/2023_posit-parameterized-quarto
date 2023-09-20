@@ -410,18 +410,19 @@
 </section>
 <section id="dont-care-about-soils" class="slide level2">
 <h2>Don’t care about soils?</h2>
-
-<img data-src="images/ocean_floor.png" alt="RStudio RMarkdown parameterized report project for mapping ocean floors." class="r-stretch"><p><a href="https://rmarkdown.rstudio.com/lesson-6.html">Ocean floor maps</a></p>
-</section>
-<section id="dont-care-about-soils-1" class="slide level2">
-<h2>Don’t care about soils?</h2>
-
-<img data-src="images/urban_institute.png" alt="Report for Alabama spending with text and plots generated from parameterized RMarkdown." class="r-stretch"><p><a href="https://book.rwithoutstatistics.com/parameterized-reports-chapter.html">Fiscal briefs</a></p>
-</section>
-<section id="dont-care-about-soils-2" class="slide level2">
-<h2>Don’t care about soils?</h2>
-
-<img data-src="images/driver_quality.png" alt="Report for Alaska driver quality with text, plot, and table generated from parameterized RMarkdown." class="r-stretch"><p><a href="https://urban-institute.medium.com/iterated-fact-sheets-with-r-markdown-d685eb4eafce">Bad drivers</a></p>
+<p>Parameterized reporting is for everyone!</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img data-src="images/ocean_floor.png" alt="RStudio RMarkdown parameterized report project for mapping ocean floors."></p>
+<p><a href="https://rmarkdown.rstudio.com/lesson-6.html">Ocean floor maps</a></p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="images/urban_institute.png" alt="Report for Alabama spending with text and plots generated from parameterized RMarkdown."></p>
+<p><a href="https://book.rwithoutstatistics.com/parameterized-reports-chapter.html">Fiscal briefs</a></p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="images/driver_quality.png" alt="Report for Alaska driver quality with text, plot, and table generated from parameterized RMarkdown."></p>
+<p><a href="https://urban-institute.medium.com/iterated-fact-sheets-with-r-markdown-d685eb4eafce">Bad drivers</a></p>
+</div>
+</div>
 <aside class="notes">
 <p>My point is the data don’t make a difference. The people do. So it’s our responsibility to make the data and results understandable and interpretable for the people who have the power to make a difference. Parameterized reports are one way to democratize data and reward people for data collection efforts.</p>
 <style type="text/css">
@@ -440,7 +441,7 @@
 <h2>Why should you listen to me?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>I was hired as an environmental technician.</p>
+<p>Hired as an environmental technician.</p>
 <p><img data-src="images/sampling.jpg" alt="Jadey in waders setting up a transect with a measuring tape to measure flow in a small stream."></p>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
@@ -449,6 +450,8 @@
 </div>
 </div>
 </div>
+<div class="fragment">
+<p>I went from picking leeches off my boots to picking cats off my keyboard!</p>
 <aside class="notes">
 <p>No CS or coding background. Went from picking leeches off my boots to picking my cat off my keyboard.</p>
 <style type="text/css">
@@ -462,6 +465,7 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</div>
 </section>
 <section id="how-did-i-go-from-a-non-coder-to-a-data-scientist" class="slide level2">
 <h2>How did I go from a ‘non-coder’ to a data scientist?</h2>
@@ -519,6 +523,8 @@
 <img data-src="images/report_html.png" alt="Beginning of 2023 example HTML report" class="r-stretch"></section>
 <section id="and-ms-word-to-pdf" class="slide level2">
 <h2>and MS Word to PDF</h2>
+<div class="fragment">
+<p>…because LaTeX <span class="emoji" data-emoji="confounded">😖</span> <span class="emoji" data-emoji="shrug">🤷</span></p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -529,8 +535,6 @@
 </div>
 </div>
 </div>
-<div class="fragment">
-<p>…because LaTeX <span class="emoji" data-emoji="confounded">😖</span> <span class="emoji" data-emoji="shrug">🤷</span></p>
 <aside class="notes">
 <p>Still haven’t learned LaTex, and not sure I’m going to?</p>
 <style type="text/css">
@@ -549,7 +553,7 @@
 <section id="code-snippets-and-7-pages-of-resources" class="slide level2">
 <h2>Code snippets and 7 pages of resources</h2>
 <p>We’re end-of-conference tired <span class="emoji" data-emoji="yawning_face">🥱</span> and our brains are full <span class="emoji" data-emoji="dizzy_face">😵</span>.</p>
-<p>Don’t worry about taking notes or pictures.</p>
+<p>Don’t worry about taking notes or copying code.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure>
 <p><a href="https://jadeynryan.github.io/2023_posit-parameterized-quarto/"><img data-src="images/qr.png" alt="QR code to slides." height="400"></a></p>
@@ -597,16 +601,16 @@
 <h2>YAML Header: Yet Another Markdown Language</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" data-code-line-numbers="2|3-5|6-8|11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Soil Health Report"</span><span class="co">               # Metadata</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">format</span><span class="kw">:</span><span class="co">                                   # Set format types</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Soil Health Report"</span><span class="co">         # Metadata</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">format</span><span class="kw">:</span><span class="co">                             # Set format types</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at">                                     </span></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at">                            </span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">params</span><span class="kw">:</span><span class="co">                                   # Set default parameters</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">params</span><span class="kw">:</span><span class="co">                             # Set default parameter key-value pairs</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a><span class="at">  </span><span class="fu">farmer</span><span class="kw">:</span><span class="at"> Sammy Sunflower                   </span></span>
 <span id="cb1-8"><a href="#cb1-8"></a><span class="at">  </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2023</span><span class="at">                                </span></span>
 <span id="cb1-9"><a href="#cb1-9"></a><span class="pp">---</span></span>
 <span id="cb1-10"><a href="#cb1-10"></a><span class="at">    </span></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="at">Report content goes here.</span><span class="co">                 # Write content</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="at">Report content goes here.</span><span class="co">           # Write content</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="access-your-parameters" class="slide level2">
@@ -635,15 +639,15 @@
 <div class="fragment">
 <p>For inline code, enclose the expression in <code>`r `</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>These are results for <span class="in">`r params$farmer`</span> from <span class="in">`r params$year`</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a>These are results for <span class="in">`r params$farmer`</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>These are results for Sammy Sunflower from 2023.</p>
+<p>These are results for Sammy Sunflower.</p>
 </div>
 </section>
 <section id="render-with-the-rstudio-ide" class="slide level2">
 <h2>Render with the RStudio IDE</h2>
 
-<img data-src="images/render.png" alt="RStudio Quarto Render button with a dropdown for HTML and MS Word with Render on Save option checked" class="r-stretch"><p><strong>Render Button</strong>, keyboard shortcut <code>Ctrl + Shift + K</code>, or by saving</p>
+<img data-src="images/render.png" alt="RStudio Quarto Render button with a dropdown for HTML and MS Word with Render on Save option checked" class="r-stretch"><p><strong>Render Button</strong>, keyboard shortcut <code>Ctrl + Shift + K</code>, or by saving.</p>
 <div class="fragment">
 <p>Uses default parameters in the YAML.</p>
 </div>
@@ -653,14 +657,14 @@
 </section>
 <section id="render-with-quartoquarto_render" class="slide level2">
 <h2>Render with <code>quarto::quarto_render()</code></h2>
-<p>Programmatically render reports in <code>Console</code> or another <code>.R</code> script.</p>
+<p>Use in <code>Console</code> or an <code>iterate.R</code> script.</p>
 <p><br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|2|3|4|5-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(</span>
 <span id="cb7-2"><a href="#cb7-2"></a>  <span class="at">input =</span> <span class="st">"template.qmd"</span>,                           <span class="co"># Input Quarto file</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a>  <span class="at">output_format =</span> <span class="st">"html"</span>,                           <span class="co"># Output format</span></span>
 <span id="cb7-4"><a href="#cb7-4"></a>  <span class="at">output_file =</span> <span class="st">"2022_OscarOrchard_Report.html"</span>,    <span class="co"># Output file name</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>  <span class="at">execute_params =</span> <span class="fu">list</span>(                            <span class="co"># List of parameters</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="at">execute_params =</span> <span class="fu">list</span>(                            <span class="co"># Named list of parameters</span></span>
 <span id="cb7-6"><a href="#cb7-6"></a>    <span class="at">farmer =</span> <span class="st">"Oscar Orchard"</span>,</span>
 <span id="cb7-7"><a href="#cb7-7"></a>    <span class="at">year =</span> <span class="dv">2022</span></span>
 <span id="cb7-8"><a href="#cb7-8"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -671,8 +675,8 @@
 <p>Create a data frame with two columns that match <code>quarto_render()</code> args:</p>
 <div>
 <ul>
-<li class="fragment"><code>output_file</code> (filename.ext)</li>
-<li class="fragment"><code>execute_params</code> (named list of parameters)</li>
+<li class="fragment"><code>output_file</code>: filename.ext</li>
+<li class="fragment"><code>execute_params</code>: named list of parameters</li>
 </ul>
 </div>
 <div class="fragment">
@@ -762,72 +766,69 @@
 <section id="our-simple-data" class="slide level2">
 <h2>Our simple data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="kable-table">
-<table>
+<table data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th style="text-align: right;">year</th>
-<th style="text-align: left;">sampleId</th>
-<th style="text-align: left;">farmer</th>
-<th style="text-align: left;">crop</th>
-<th style="text-align: right;">sand_%</th>
-<th style="text-align: right;">silt_%</th>
-<th style="text-align: right;">clay_%</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">year</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">sampleId</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">farmer</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">crop</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">sand_%</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">silt_%</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">clay_%</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">2023</td>
+<td style="text-align: right; background-color: #FDCE86 !important;">2023</td>
 <td style="text-align: left;">23-SUN-01</td>
-<td style="text-align: left;">Sammy Sunflower</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Sammy Sunflower</td>
 <td style="text-align: left;">Sunflower</td>
 <td style="text-align: right;">44</td>
 <td style="text-align: right;">23</td>
 <td style="text-align: right;">3</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2022</td>
+<td style="text-align: right; background-color: #FDCE86 !important;">2022</td>
 <td style="text-align: left;">22-ORC-02</td>
-<td style="text-align: left;">Oscar Orchard</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Oscar Orchard</td>
 <td style="text-align: left;">Cherry</td>
 <td style="text-align: right;">69</td>
 <td style="text-align: right;">21</td>
 <td style="text-align: right;">10</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2022</td>
+<td style="text-align: right; background-color: #FDCE86 !important;">2022</td>
 <td style="text-align: left;">22-TOM-02</td>
-<td style="text-align: left;">Tina Tomato</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Tina Tomato</td>
 <td style="text-align: left;">Vegetable</td>
 <td style="text-align: right;">11</td>
 <td style="text-align: right;">79</td>
 <td style="text-align: right;">10</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2022</td>
+<td style="text-align: right; background-color: #FDCE86 !important;">2022</td>
 <td style="text-align: left;">22-HAR-03</td>
-<td style="text-align: left;">Henry Harvest</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Henry Harvest</td>
 <td style="text-align: left;">Herb</td>
 <td style="text-align: right;">36</td>
 <td style="text-align: right;">51</td>
 <td style="text-align: right;">13</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">2023</td>
+<td style="text-align: right; background-color: #FDCE86 !important;">2023</td>
 <td style="text-align: left;">23-GAR-03</td>
-<td style="text-align: left;">Grace Gardener</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Grace Gardener</td>
 <td style="text-align: left;">Sunflower</td>
 <td style="text-align: right;">64</td>
 <td style="text-align: right;">33</td>
 <td style="text-align: right;">3</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2022</td>
+<td style="text-align: right; background-color: #FDCE86 !important;">2022</td>
 <td style="text-align: left;">22-QUI-02</td>
-<td style="text-align: left;">Quincy Quinoa</td>
+<td style="text-align: left; background-color: #FDCE86 !important;">Quincy Quinoa</td>
 <td style="text-align: left;">Quinoa</td>
 <td style="text-align: right;">24</td>
 <td style="text-align: right;">62</td>
@@ -835,65 +836,57 @@
 </tr>
 </tbody>
 </table>
+
+
 </div>
 </div>
+<p><br></p>
+<div class="fragment">
+<p>fake farmer names: ChatGPT 🙏🏻</p>
 </div>
-<aside class="notes">
-<p>dummy punny farmer names from Chat GPT</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="use-params-to-set-up-comparisons" class="slide level2">
 <h2>Use <code>params</code> to set up comparisons</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="2|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>data <span class="sc">|&gt;</span> </span>
-<span id="cb11-2"><a href="#cb11-2"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(farmer <span class="sc">==</span> params<span class="sc">$</span>farmer) <span class="sc">|&gt;</span> </span>
-<span id="cb11-3"><a href="#cb11-3"></a>  more data wrangling</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="2|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(farmer <span class="sc">==</span> params<span class="sc">$</span>farmer) <span class="sc">|&gt;</span> </span>
+<span id="cb10-3"><a href="#cb10-3"></a>  more data wrangling</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Get the farmer's crops</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>farmer_crop <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(farmer <span class="sc">==</span> params<span class="sc">$</span>farmer) <span class="sc">|&gt;</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  dplyr<span class="sc">::</span><span class="fu">pull</span>(crop) <span class="sc">|&gt;</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">unique</span>()</span>
-<span id="cb12-6"><a href="#cb12-6"></a></span>
-<span id="cb12-7"><a href="#cb12-7"></a>data_long <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
-<span id="cb12-8"><a href="#cb12-8"></a>  <span class="co"># Tidy data: one observation per row</span></span>
-<span id="cb12-9"><a href="#cb12-9"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"sand_%"</span><span class="sc">:</span><span class="st">"clay_%"</span>),</span>
-<span id="cb12-10"><a href="#cb12-10"></a>                    <span class="at">names_to =</span> <span class="st">"measurement"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-11"><a href="#cb12-11"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb12-12"><a href="#cb12-12"></a>    <span class="co"># Categorize samples based on if they are from the farmer of</span></span>
-<span id="cb12-13"><a href="#cb12-13"></a>    <span class="co"># interest or are of the same crop type</span></span>
-<span id="cb12-14"><a href="#cb12-14"></a>    <span class="at">category =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
-<span id="cb12-15"><a href="#cb12-15"></a>      farmer <span class="sc">==</span> params<span class="sc">$</span>farmer <span class="sc">~</span> <span class="st">"Your fields"</span>,</span>
-<span id="cb12-16"><a href="#cb12-16"></a>      crop <span class="sc">%in%</span> farmer_crop <span class="sc">~</span> <span class="st">"Same crop"</span>,</span>
-<span id="cb12-17"><a href="#cb12-17"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Other fields"</span></span>
-<span id="cb12-18"><a href="#cb12-18"></a>    )</span>
-<span id="cb12-19"><a href="#cb12-19"></a>  )</span>
-<span id="cb12-20"><a href="#cb12-20"></a></span>
-<span id="cb12-21"><a href="#cb12-21"></a><span class="co"># Set category factor levels</span></span>
-<span id="cb12-22"><a href="#cb12-22"></a>data_long<span class="sc">$</span>category <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
-<span id="cb12-23"><a href="#cb12-23"></a>  data_long<span class="sc">$</span>category,</span>
-<span id="cb12-24"><a href="#cb12-24"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Other fields"</span>, <span class="st">"Same crop"</span>, <span class="st">"Your fields"</span>),</span>
-<span id="cb12-25"><a href="#cb12-25"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Other fields"</span>, <span class="st">"Same crop"</span>, <span class="st">"Your fields"</span>)</span>
-<span id="cb12-26"><a href="#cb12-26"></a>)</span>
-<span id="cb12-27"><a href="#cb12-27"></a></span>
-<span id="cb12-28"><a href="#cb12-28"></a>data_long <span class="sc">|&gt;</span> </span>
-<span id="cb12-29"><a href="#cb12-29"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(year, sampleId)) <span class="sc">|&gt;</span> </span>
-<span id="cb12-30"><a href="#cb12-30"></a>  dplyr<span class="sc">::</span><span class="fu">slice_head</span>(<span class="at">by =</span> category) <span class="sc">|&gt;</span> </span>
-<span id="cb12-31"><a href="#cb12-31"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb12-32"><a href="#cb12-32"></a>  kableExtra<span class="sc">::</span><span class="fu">column_spec</span>(<span class="dv">5</span>, <span class="at">background =</span> <span class="st">"#FDCE86"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Get the farmer's crops</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>farmer_crop <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(farmer <span class="sc">==</span> params<span class="sc">$</span>farmer) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>  dplyr<span class="sc">::</span><span class="fu">pull</span>(crop) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">unique</span>()</span>
+<span id="cb11-6"><a href="#cb11-6"></a></span>
+<span id="cb11-7"><a href="#cb11-7"></a>data_long <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a>  <span class="co"># Tidy data: one observation per row</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"sand_%"</span><span class="sc">:</span><span class="st">"clay_%"</span>),</span>
+<span id="cb11-10"><a href="#cb11-10"></a>                    <span class="at">names_to =</span> <span class="st">"measurement"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb11-11"><a href="#cb11-11"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb11-12"><a href="#cb11-12"></a>    <span class="co"># Categorize samples based on if they are from the farmer of</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a>    <span class="co"># interest or are of the same crop type</span></span>
+<span id="cb11-14"><a href="#cb11-14"></a>    <span class="at">category =</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
+<span id="cb11-15"><a href="#cb11-15"></a>      farmer <span class="sc">==</span> params<span class="sc">$</span>farmer <span class="sc">~</span> <span class="st">"Your fields"</span>,</span>
+<span id="cb11-16"><a href="#cb11-16"></a>      crop <span class="sc">%in%</span> farmer_crop <span class="sc">~</span> <span class="st">"Same crop"</span>,</span>
+<span id="cb11-17"><a href="#cb11-17"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Other fields"</span></span>
+<span id="cb11-18"><a href="#cb11-18"></a>    )</span>
+<span id="cb11-19"><a href="#cb11-19"></a>  )</span>
+<span id="cb11-20"><a href="#cb11-20"></a></span>
+<span id="cb11-21"><a href="#cb11-21"></a><span class="co"># Set category factor levels</span></span>
+<span id="cb11-22"><a href="#cb11-22"></a>data_long<span class="sc">$</span>category <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb11-23"><a href="#cb11-23"></a>  data_long<span class="sc">$</span>category,</span>
+<span id="cb11-24"><a href="#cb11-24"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Other fields"</span>, <span class="st">"Same crop"</span>, <span class="st">"Your fields"</span>),</span>
+<span id="cb11-25"><a href="#cb11-25"></a>  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Other fields"</span>, <span class="st">"Same crop"</span>, <span class="st">"Your fields"</span>)</span>
+<span id="cb11-26"><a href="#cb11-26"></a>)</span>
+<span id="cb11-27"><a href="#cb11-27"></a></span>
+<span id="cb11-28"><a href="#cb11-28"></a>data_long <span class="sc">|&gt;</span> </span>
+<span id="cb11-29"><a href="#cb11-29"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(year, sampleId)) <span class="sc">|&gt;</span> </span>
+<span id="cb11-30"><a href="#cb11-30"></a>  dplyr<span class="sc">::</span><span class="fu">slice_head</span>(<span class="at">by =</span> category) <span class="sc">|&gt;</span> </span>
+<span id="cb11-31"><a href="#cb11-31"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb11-32"><a href="#cb11-32"></a>  kableExtra<span class="sc">::</span><span class="fu">column_spec</span>(<span class="dv">5</span>, <span class="at">background =</span> <span class="st">"#FDCE86"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <table data-quarto-postprocess="true">
@@ -946,44 +939,44 @@
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb13-3"><a href="#cb13-3"></a>data_long <span class="sc">|&gt;</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
-<span id="cb13-5"><a href="#cb13-5"></a>    <span class="at">x =</span> measurement,</span>
-<span id="cb13-6"><a href="#cb13-6"></a>    <span class="at">y =</span> value,</span>
-<span id="cb13-7"><a href="#cb13-7"></a>    <span class="at">color =</span> category,</span>
-<span id="cb13-8"><a href="#cb13-8"></a>    <span class="at">shape =</span> category,</span>
-<span id="cb13-9"><a href="#cb13-9"></a>    <span class="at">size =</span> category,</span>
-<span id="cb13-10"><a href="#cb13-10"></a>    <span class="at">alpha =</span> category</span>
-<span id="cb13-11"><a href="#cb13-11"></a>  )) <span class="sc">+</span></span>
-<span id="cb13-12"><a href="#cb13-12"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a>  <span class="co"># Define styles for producer's samples versus all samples</span></span>
-<span id="cb13-14"><a href="#cb13-14"></a>  <span class="fu">scale_alpha_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="cb13-15"><a href="#cb13-15"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="fl">0.5</span>,</span>
-<span id="cb13-16"><a href="#cb13-16"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="dv">1</span>,</span>
-<span id="cb13-17"><a href="#cb13-17"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb13-18"><a href="#cb13-18"></a>  )) <span class="sc">+</span></span>
-<span id="cb13-19"><a href="#cb13-19"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="cb13-20"><a href="#cb13-20"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="st">"#CCC29C"</span>,</span>
-<span id="cb13-21"><a href="#cb13-21"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="st">"#76ADBC"</span>,</span>
-<span id="cb13-22"><a href="#cb13-22"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="st">"#A60F2D"</span></span>
-<span id="cb13-23"><a href="#cb13-23"></a>  )) <span class="sc">+</span></span>
-<span id="cb13-24"><a href="#cb13-24"></a>  <span class="fu">scale_size_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
-<span id="cb13-25"><a href="#cb13-25"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
-<span id="cb13-26"><a href="#cb13-26"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="dv">4</span>,</span>
-<span id="cb13-27"><a href="#cb13-27"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb13-28"><a href="#cb13-28"></a>  )) <span class="sc">+</span></span>
-<span id="cb13-29"><a href="#cb13-29"></a>  washi<span class="sc">::</span><span class="fu">washi_theme</span>(</span>
-<span id="cb13-30"><a href="#cb13-30"></a>    <span class="at">legend_position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb13-31"><a href="#cb13-31"></a>    <span class="at">gridline_x =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb13-32"><a href="#cb13-32"></a>    <span class="at">gridline_y =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb13-33"><a href="#cb13-33"></a>    <span class="at">text_scale =</span> <span class="fl">1.5</span></span>
-<span id="cb13-34"><a href="#cb13-34"></a>  ) <span class="sc">+</span></span>
-<span id="cb13-35"><a href="#cb13-35"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb13-36"><a href="#cb13-36"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb13-37"><a href="#cb13-37"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb13-38"><a href="#cb13-38"></a>        <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"gray"</span>, <span class="at">fill =</span> <span class="cn">NA</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb12-3"><a href="#cb12-3"></a>data_long <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    <span class="at">x =</span> measurement,</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    <span class="at">y =</span> value,</span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="at">color =</span> category,</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="at">shape =</span> category,</span>
+<span id="cb12-9"><a href="#cb12-9"></a>    <span class="at">size =</span> category,</span>
+<span id="cb12-10"><a href="#cb12-10"></a>    <span class="at">alpha =</span> category</span>
+<span id="cb12-11"><a href="#cb12-11"></a>  )) <span class="sc">+</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a>  <span class="co"># Define styles for producer's samples versus all samples</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>  <span class="fu">scale_alpha_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb12-15"><a href="#cb12-15"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="fl">0.5</span>,</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="dv">1</span>,</span>
+<span id="cb12-17"><a href="#cb12-17"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a>  )) <span class="sc">+</span></span>
+<span id="cb12-19"><a href="#cb12-19"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb12-20"><a href="#cb12-20"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="st">"#CCC29C"</span>,</span>
+<span id="cb12-21"><a href="#cb12-21"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="st">"#76ADBC"</span>,</span>
+<span id="cb12-22"><a href="#cb12-22"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="st">"#A60F2D"</span></span>
+<span id="cb12-23"><a href="#cb12-23"></a>  )) <span class="sc">+</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a>  <span class="fu">scale_size_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb12-25"><a href="#cb12-25"></a>    <span class="st">"Other fields"</span> <span class="ot">=</span> <span class="dv">2</span>,</span>
+<span id="cb12-26"><a href="#cb12-26"></a>    <span class="st">"Same crop"</span> <span class="ot">=</span> <span class="dv">4</span>,</span>
+<span id="cb12-27"><a href="#cb12-27"></a>    <span class="st">"Your fields"</span> <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a>  )) <span class="sc">+</span></span>
+<span id="cb12-29"><a href="#cb12-29"></a>  washi<span class="sc">::</span><span class="fu">washi_theme</span>(</span>
+<span id="cb12-30"><a href="#cb12-30"></a>    <span class="at">legend_position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb12-31"><a href="#cb12-31"></a>    <span class="at">gridline_x =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-32"><a href="#cb12-32"></a>    <span class="at">gridline_y =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-33"><a href="#cb12-33"></a>    <span class="at">text_scale =</span> <span class="fl">1.5</span></span>
+<span id="cb12-34"><a href="#cb12-34"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-35"><a href="#cb12-35"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb12-36"><a href="#cb12-36"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb12-37"><a href="#cb12-37"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb12-38"><a href="#cb12-38"></a>        <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"gray"</span>, <span class="at">fill =</span> <span class="cn">NA</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -995,10 +988,11 @@
 <p><br></p>
 <p>Instead of ~300 lines of markdown:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">## What We Measured in Your Soil</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a>{{&lt; include soil_health_measurements.qmd &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">## What We Measured in Your Soil</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>{{&lt; include soil_health_measurements.qmd &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><br></p>
 <p><code>Includes</code> shortcodes make it easy to reuse information across reports.</p>
 </div>
 </section>
@@ -1007,11 +1001,12 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1"></a><span class="pp">---</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Include in YAML</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="pp">---</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="fragment">Otherwise, no one knows what to do with a <code>_files</code> folder of dependencies.</span></p>
 </div><div class="fragment column" style="width:50%;">
@@ -1028,13 +1023,13 @@
 <section id="conditional-markdown" class="slide level2">
 <h2>Conditional markdown</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="1|"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1"></a>:::: {.content-visible when-format="html"}</span>
-<span id="cb16-2"><a href="#cb16-2"></a>::: panel-tabset</span>
-<span id="cb16-3"><a href="#cb16-3"></a></span>
-<span id="cb16-4"><a href="#cb16-4"></a>Background on soil measurements.</span>
-<span id="cb16-5"><a href="#cb16-5"></a></span>
-<span id="cb16-6"><a href="#cb16-6"></a>:::</span>
-<span id="cb16-7"><a href="#cb16-7"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="1|"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1"></a>:::: {.content-visible when-format="html"}</span>
+<span id="cb15-2"><a href="#cb15-2"></a>::: panel-tabset</span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a>Background on soil measurements.</span>
+<span id="cb15-5"><a href="#cb15-5"></a></span>
+<span id="cb15-6"><a href="#cb15-6"></a>:::</span>
+<span id="cb15-7"><a href="#cb15-7"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p><img data-src="images/tabset.png" alt="Screenshot of soil measurement tabset in HTML report."></p>
@@ -1043,11 +1038,11 @@
 <section id="conditional-markdown-1" class="slide level2">
 <h2>Conditional markdown</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="1|"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1"></a>:::: {.content-visible unless-format="html"}</span>
-<span id="cb17-2"><a href="#cb17-2"></a></span>
-<span id="cb17-3"><a href="#cb17-3"></a>Background on soil measurements.</span>
-<span id="cb17-4"><a href="#cb17-4"></a></span>
-<span id="cb17-5"><a href="#cb17-5"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="1|"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1"></a>:::: {.content-visible unless-format="html"}</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a>Background on soil measurements.</span>
+<span id="cb16-4"><a href="#cb16-4"></a></span>
+<span id="cb16-5"><a href="#cb16-5"></a>::::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p><img data-src="images/no_tabset.png" alt="Screenshot of soil measurements without tabset in MS Word report." height="500"></p>
@@ -1060,11 +1055,11 @@
 <p><br></p>
 <p>Get the output format type in your setup chunk:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="in">```{r setup}</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a><span class="co"># Include in first chunk of .qmd</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a><span class="co"># Get output file type</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>out_type <span class="ot">&lt;-</span> knitr<span class="sc">::</span>opts_knit<span class="sc">$</span><span class="fu">get</span>(<span class="st">"rmarkdown.pandoc.to"</span>)</span>
-<span id="cb18-5"><a href="#cb18-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1"></a><span class="in">```{r setup}</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="co"># Include in first chunk of .qmd</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co"># Get output file type</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>out_type <span class="ot">&lt;-</span> knitr<span class="sc">::</span>opts_knit<span class="sc">$</span><span class="fu">get</span>(<span class="st">"rmarkdown.pandoc.to"</span>)</span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1073,41 +1068,53 @@
 <p>Use <code>out_type</code> in <code>eval</code> chunk option.</p>
 <p>Interactive plot for HTML reports:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1"></a><span class="in">```{r}</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="co">#| eval: !expr out_type == "html"</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a></span>
-<span id="cb19-4"><a href="#cb19-4"></a><span class="co"># code to create interactive {plotly}</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="co">#| eval: !expr out_type == "html"</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="co"># code to create interactive {plotly}</span></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>Static plot for MS Word reports:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="co">#| eval: !expr out_type == "docx"</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a></span>
-<span id="cb20-4"><a href="#cb20-4"></a><span class="co"># code to create static {ggplot2}</span></span>
-<span id="cb20-5"><a href="#cb20-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="co">#| eval: !expr out_type == "docx"</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="co"># code to create static {ggplot2}</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="style-with-font-size-and-color-contrast-in-mind" class="slide level2">
 <h2>Style with font size and color contrast in mind</h2>
-
-<img data-src="images/contrast_checker.png" alt="Screenshot of color contrast tool." class="r-stretch quarto-figure-center"></section>
-<section id="style-with-font-size-and-color-contrast-in-mind-1" class="slide level2">
-<h2>Style with font size and color contrast in mind</h2>
-
-<img data-src="images/viz_palette.png" alt="Screenshot of viz-palette color palette tool." class="r-stretch quarto-figure-center"></section>
-<section id="style-with-font-size-and-color-contrast-in-mind-2" class="slide level2">
-<h2>Style with font size and color contrast in mind</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://colourcontrast.cc/"><img data-src="images/contrast_checker.png" alt="Screenshot of color contrast tool."></a></p>
+</figure>
+</div>
+<p><a href="https://colourcontrast.cc/">Colour Contrast</a></p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://projects.susielu.com/viz-palette"><img data-src="images/viz_palette.png" alt="Screenshot of viz-palette color palette tool."></a></p>
+</figure>
+</div>
+<p><a href="https://projects.susielu.com/viz-palette">Viz Palette</a></p>
+</div>
+</div>
+</section>
+<section id="use-style-sheets-and-templates" class="slide level2">
+<h2>Use style sheets and templates</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="5|7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Include in YAML header:</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="pp">---</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at">                                     </span></span>
-<span id="cb21-4"><a href="#cb21-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at">                                     </span></span>
-<span id="cb21-5"><a href="#cb21-5"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span><span class="co">               # Style for HTML output</span></span>
-<span id="cb21-6"><a href="#cb21-6"></a><span class="at">  </span><span class="fu">word_document</span><span class="kw">:</span><span class="at">                            </span></span>
-<span id="cb21-7"><a href="#cb21-7"></a><span class="at">    </span><span class="fu">reference_docx</span><span class="kw">:</span><span class="at"> styles.docx</span><span class="co">   # Style for MS Word output</span></span>
-<span id="cb21-8"><a href="#cb21-8"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="5|7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Include in YAML header:</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="pp">---</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at">                                     </span></span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at">                                     </span></span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span><span class="co">               # Style for HTML output</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a><span class="at">  </span><span class="fu">word_document</span><span class="kw">:</span><span class="at">                            </span></span>
+<span id="cb20-7"><a href="#cb20-7"></a><span class="at">    </span><span class="fu">reference_docx</span><span class="kw">:</span><span class="at"> styles.docx</span><span class="co">   # Style for MS Word output</span></span>
+<span id="cb20-8"><a href="#cb20-8"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="check-html-with-browser-developer-tools" class="slide level2">
@@ -1237,6 +1244,7 @@
 </section>
 <section id="id-love-to-connect-with-you" class="slide level2">
 <h2>I’d love to connect with you!</h2>
+<p>My three fave things: cats, nature, and R/Quarto.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><i class="fa-solid fa-display" aria-label="display"></i> <a href="https://jadeynryan.github.io/2023_posit-parameterized-quarto/">Slides</a></p>
@@ -1250,7 +1258,7 @@
 </figure>
 </div>
 </div><div class="fragment column" style="width:50%;">
-<p><img data-src="images/upside_down_skye.jpg"></p>
+<p><img data-src="images/upside_down_skye.jpg" height="600"></p>
 </div>
 </div>
 <p><img src="images/logo-wsda-color.png" class="slide-logo"></p>
