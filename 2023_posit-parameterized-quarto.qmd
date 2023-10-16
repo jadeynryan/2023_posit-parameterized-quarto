@@ -302,19 +302,9 @@ reports |>
     )
 ```
 
-## 
+##  
 
-{{< video videos/render_reports.mp4 >}}
-
-##  {visibility="hidden"}
-
-::: {style="width:100%;height:0;padding-bottom:56%;position:relative;"}
-<iframe src="https://giphy.com/embed/FzhwFt4V8r69FSVIIT" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
-
-</iframe>
-:::
-
-<p><a href="https://giphy.com/gifs/FzhwFt4V8r69FSVIIT"></a></p>
+<iframe src="https://drive.google.com/file/d/1uMz7iQzi06JcuuhYidNjvQDrrjhBPMeg/preview" width="100%" height="100%" allow="autoplay"></iframe>
 
 ## 
 

@@ -2,8 +2,9 @@
 
 [Slides](https://jadeynryan.github.io/2023_posit-parameterized-quarto/#/title-slide)
 
-Wed, September 20
-5:20 PM - 5:40 PM CDT
+Wed, September 20, 2023
+
+[posit::conf(2023)](https://posit.co/conference/)
 
 Jadey Ryan, Data Scientist, WA Dept. of Agriculture
 

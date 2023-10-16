@@ -67,20 +67,10 @@ details>summary {
 .reveal .footer {
   color: $theme-blue;
   font-family: $font-family-sans-serif;
-  padding-bottom: 0px;
-}
-
-.reveal .slide-logo {
-  right: 12px;
-  padding-bottom: 20px !important;
-  max-height: 70px !important;
-  z-index: 1;
+  font-size: 0.1em;
 }
 
 .reveal .slide-menu-button {
-    left: 100px;
-    top: 30px;
-    padding-left: 20px;
     color: $theme-blue;
   }
 
